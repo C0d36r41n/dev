@@ -1,0 +1,330 @@
+body {
+  /*font: 14px Tahoma
+  color: #00065B;*/
+  width: 1200px; /*Ширина сайт*/
+  margin: 0 auto; /*отцентровка*/
+  padding: 10px; /*Отступ от внутренних границ рамки*/
+  background-color:#f6f6f6; /*Цвет фона страницы*/
+  background-image: url(./Img/pattern.png); /*Фоновый рисунок*/
+  /*background-repeat:repeat; - фоновое изображение повторяется.очень полезное свойство. ЮЗАЙ ПОСТОЯННО. repeat | repeat-x | repeat-y | no-repeat */
+  /*background-position:right bottom; - расположение фонового изображения.% | left | right | top | bottom | px*/
+}
+
+.content { /*Класс*/
+  float: right; /*ВЫРАВНИВАНИЕ ПО ПРАВОЙ СТОРОНЕ*/
+  width: 80%;
+}
+
+.teg {
+  color: #DC143C  ;
+  font-weight:bold;
+}
+
+.primer {
+border-width:1px; /*Толщина рамки*/
+border-style:solid; /*Стиль рамки. Dotted | Dashed | Double | Groove | Ridge | Inset | Outset*/
+border-color:#A9A9A9; /*Цвет рамки*/
+border-radius: 3px; /*Закругление рамки*/
+padding: 10px;
+background-color:#DEDEDE; /*Цвет фона*/
+}
+
+.menu {
+  float: left; /*ВЫРАВНИВАНИЕ ПО ЛЕВОЙ СТОРОНЕ*/
+  width: 20%;
+}
+
+p, h4, #myList {
+  color: #404040; /*ЦВЕТ ТЕКСТА*/
+}
+p {
+  font-family:Verdana, Tahoma, "Courier New", sans-serif; /*Шрифт*/
+  font-size:14px; /*Размер шрифта*/
+  line-height:1.5; /*Межстрочный интервал. Можно в px | em | pt | %*/
+  word-spacing:3px; /*Интервал между словами*/
+}
+
+#BE { /*Заголовок "Блочные элементы"*/
+text-transform:uppercase; /* РЕГИСТР. Делает текст заглавными буквами. uppercase | lowercase | capitalize*/
+border-width:2px; /*Толщина рамки*/
+border-style:solid; /*Стиль рамки. Dotted | Dashed | Double | Groove | Ridge | Inset | Outset*/
+border-color:#000000; /*Цвет рамки*/
+border-radius: 10px; /*Закругление рамки*/
+box-shadow: 3px 3px 7px #000000; /*Тень*/
+padding: 0 10px 0; /*внутренние отступы в рамке*/
+}
+
+#Start {
+color: #FF0000;
+text-align: center; /*ВЫРАВНИВАНИЕ*/
+letter-spacing: 3px; /*Расстояние между буквами*/
+background-color: #cc0000; /*Цвет фона заголовка*/
+color: #ffffff;
+opacity: 0.5; /*Прозрачность*/
+}
+
+#Start:hover { /*Изменение при наведении*/
+opacity: 1;
+}
+
+.new {
+  color: #6be5c3;
+}
+
+.ul1 li { /*селектор потомков*/
+color: #cc0000;
+}
+
+/*a { - Статичный цвет ссылки при всех действиях
+  color: #111111;
+}*/
+
+a:link{ /*Цвет не нажатой ссылки*/
+  color: #111111;
+}
+
+a:visited { /*Посещенная ссылка*/
+color: #FAA21A;
+}
+
+a:hover { /*СОБЫТИЙНЫЙ СЕЛЕКТОР. Цвет ссылки при наведении на нее курсора*/
+color: #800000;
+}
+
+a:active { /*Цвет ссылки в момент клика*/
+color: #008000:;
+}
+
+.kyrsiv{
+  font-style: italic; /*КУРСИВ*/
+}
+
+.zhirni{
+font-weight:bold; /*ЖИРНЫЙ*/
+}
+
+.pod4 {
+  text-decoration: underline; /*ПОДЧЕРКИВАНИЕ*/
+}
+
+.nad4 {
+  text-decoration: overline; /*ЧЕРТА СВЕРХУ*/
+}
+
+.pere4 {
+  text-decoration: line-through; /*ЗАЧЕРКИВАНИЕ*/
+}
+
+.bezpod4 {
+  text-decoration: none; /*УБИРАЕТ ВСЕ ЭФФЕКТЫ.*/
+}
+
+.virleft {
+  text-align: left;
+}
+
+.vircenter  {
+  text-align: center;
+}
+
+.virright {
+  text-align: right;
+}
+
+.virjustify {
+  text-align: justify;
+}
+
+.ks { /*красная строка*/
+  text-indent: 20px; /*margin-left: 20px;*/
+}
+
+.font {
+color: #404040;
+font: italic bold 14px Verdana; /*font-style | font-weight | font-size | font-family*/
+}
+
+.ul { /*Стили маркеров списка*/
+  list-style: none url(/img/Gal.jpeg)
+}
+ #d1 {
+  width: 700px;
+  height: 421px;
+  margin: 10px auto;
+  outline: 1px solid #FAA21A;
+ background-image: url(../Img/gc.jpg);
+ }
+
+ .mh1 {
+  text-align: center;
+  padding-top: 200px;
+  color:#CEE9F8;
+  font: 36px Verdana
+  }
+
+table, td, th {
+  border: 1px solid #cccccc; /*КОРОТКАЯ ЗАПИСЬ ОПИСАНИЯ ПАРАМТЕРОВ РАМКИ*/
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table {
+  width: 600px;
+  margin: 0 auto;
+  /*border-collapse: collapse; УБИРАЕТ ДВОЙНЫЕ РАМКИ */
+}
+
+td, th {
+  height: 50px;
+  padding: 5px;
+}
+
+th {
+  background-color: #FEFECC; /*ЦВЕТ ФОНА*/
+}
+
+form input:focus { /*ПСЕВДОКЛАСС ФОКУС. выделяет элемент, который в фокусе*/
+    border-color: #0088cc;
+}
+
+input[type="submit"] { /*ЦВЕТ РАМКИ У КНОПКИ*/
+    border-color: green;
+}
+
+/* tr {
+  border-bottom: 2px solid lightgray; - ОТОБРАЖАЕТ ТОЛЬКО НИЖНИЕ РАМКИ ТАБЛИЦЫ
+  vertical-align: middle; - ВЫРАВНИВАНИЕ ТЕКСТА В ЯЧЕЙКЕ ПО ВЕРТИКАЛЕ | top | middle | bottom | baseline | sub | super
+  text-align: center; - ВЫРАВНИВАНИЕ ТЕКСТА В ЯЧЕЙКЕ ПО ГОРИЗОНТАЛЕ
+  padding:; 20px; - ОТСТУП СО ВСЕХ СТОРОН
+  width: 50%; -  ШИРИНА СТРОКИ
+  margin-bottom: 20px; - ОТСТУП ВНИЗ
+  clear: both; - ОТМЕНЯЕТ ОБТЕКАНИЕ ЭЛЕМЕНТА С ЛЕВОГО И ПРАВОГО КРАЯ
+  inherit - ПРИНУДИТЕЛЬНОЕ НАСЛЕДОВАНИЕ ОТ РОДИТЕЛЬСКОГО ЭЛЕМЕНТА
+  } */
+
+/*СПРАЙТЫ
+Спрайт — это одно большое изображение, в котором содержится много маленьких, как бы карта изображений. Вот живой пример (эта же картинка выведена на тёмном фоне внизу мини-браузера), который мы будем использовать в задании.
+Спрайты используются, чтобы снизить количество запросов на сервер. Каждая маленькая картинка — это отдельный запрос, а чем меньше запросов, тем лучше. Поэтому маленькие картинки «склеивают» в одну большую.
+Части спрайта отображают в элементах с небольшими размерами. Такому элементу задают картинку-спрайт в качестве фона и смещают её таким образом, чтобы была видна нужная её часть.
+В спрайты обычно объединяют иконки и различные мелкие декоративные изображения. Кстати, есть сервисы для быстрого создания спрайтов и генерации CSS-кода для них, например, SpritePad.
+*/
+
+/*КОНТЕКСТНЫЕ СЕЛЕКТОРЫ
+Селектор может состоять из нескольких частей, разделённых пробелом
+
+.shooter-1 .first, .third, .fourth {
+    background-color: white;
+}
+
+.shooter-1 .second, .shooter-1 .fifth {
+    background-color: red;
+    }
+
+.shooter-2 .first {
+    background-color: red;
+}
+
+.shooter-2 .second, .third, .fourth, .fifth {
+    background-color: white;
+}
+*/
+
+/* ВЫПАДАЮЩЕЕ МЕНЮ
+li.top ul.submenu {
+  display: none;
+}
+
+li.top:hover ul.submenu {
+  display: block;
+}
+
+em {
+    display: none;
+}
+
+tr:hover em {
+    display: inline;
+}
+
+tr:hover strong {
+    color: #0088cc;
+}
+*/
+
+/* ДИНАМИЧНАЯ ССЫЛКА
+
+a {
+text-decoration: none;
+color: #0088CC;
+border-bottom: 1px dashed #0088CC;
+}
+
+a:hover {
+    border-bottom: none;
+}
+*/
+
+/*white-space - УПРАВЛЕНИЕ ПРОБЕЛАМИ
+nowrap — отображает весь текст одной строкой без переносов;
+pre — сохраняет пробелы и переносы как в исходном коде аналогично тегу <pre>;
+pre-wrap — работает как значение pre, но добавляет автоматические переносы, если текст не помещается в контейнер;
+normal — режим по умолчанию.
+*/
+
+/* background-position
+Когда фоновое изображение больше блока, то оно обрезается. Управлять тем, какую часть изображения будет видно, также можно с помощью свойства background-position.
+Иногда для этого удобно использовать относительные значения (проценты), а иногда абсолютные (пиксели).
+Кстати, можно использовать не только положительные, но и отрицательные значения. А также комбинировать пиксели и проценты.
+Пример:
+background-position:35px 25px;
+background-position:-95px 25px;
+background-position:-45px 50%;
+background-position:100% 50%;
+*/
+
+/*background-attachment
+Обычно фоновое изображение прокручивается вместе с содержимым блока. Это хорошо видно в мини-браузере. Прокрутите окно вниз и увидите, что фон поднимется наверх.
+С помощью свойства background-attachment можно зафиксировать фон на месте и он не будет перемещаться при прокручивании.
+Значение свойства:
+scroll — фон прокручивается вместе с содержимым. Это значение по умолчанию.
+fixed — фон не прокручивается, зафиксирован на одном месте.
+Это тот случай, когда легче показать, чем объяснять: выполняйте задание и смотрите, как изменяется поведение фона при прокрутке.
+*/
+
+/*background
+Фон элемента можно задавать с помощью отдельных свойств: background-color, background-image и т.д. Получается довольно громоздкая запись.
+Также задать фон можно с помощью сокращенного свойства background, в котором через пробел перечисляются его компоненты:
+background: [bc] [bi] [br] [bp] [ba];
+Обозначения:
+[bc] — background-color
+[bi] — background-image
+[br] — background-repeat
+[bp] — background-position
+[ba] — background-attachment
+Если какой-то компонент не указан, то берется значение по умолчанию. Ниже примеры.
+background: #e74c3c;
+background: url("img.png") no-repeat;
+background: url("img.png") 10px 20px;
+В первом примере просто задан цвет фона.
+Во втором примере задано не повторяющееся фоновое изображение, а также по умолчанию прозрачный цвет фона, расположение в левом верхнем углу.
+В третьем примере задано фоновое изображение и его расположение, а также по умолчанию прозрачный цвет фона и режим повторения во все стороны.
+*/
+
+/* Как отцентровать элемент
+Чтобы отцентровать блочный элемент, нужно выполнить следующие действия:
+Задать элементу ширину, которая меньше ширины родительского контейнера.
+Задать для внешних отступов справа и слева значение auto.
+Примеры кода:
+
+selector {
+    width: 100px;
+    margin: 0 auto;
+}
+
+selector {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
