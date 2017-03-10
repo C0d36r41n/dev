@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
+	</head>
+	<body style = "background-color: #FFFAFA">
+		<h1 id="Start" align="center">ОГЛАВЛЕНИЕ</h1>
+			<ul>
+				<li><b><a href="#header">БЛОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
+				<li><b><a href="#Text">СТРОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
+				<li><b><a href="#SP">СПИСКИ</a></b></li>
+				<li><b><a href="#img">ИЗОБРАЖЕНИЕ + ТЕКСТ</a></b></li>
+				<li><b><a href="#link">ССЫЛКА</a></b></li>
+				<li><b><a href="#tbl">ТАБЛИЦА</a></b></li>
+				<li><b><a href="#frm">ФОРМЫ</a></b></li>
+				<li><b><a href="#rk">РАДИОКНОПКИ И ЧЕКБОКСЫ</a></b></li>
+			</ul>
+		<fieldset>
+			<Legend id="header"><h2> Блочные элементы </h2></legend>
+			<h1>Заголовок h1</h1>
+			<h2>Заголовок h2</h2>
+			<h3>Заголовок h3</h3>
+			<h4>Заголовок h4</h4>
+			<h5>Заголовок h5</h5>
+			<h6>Заголовок h6</h6>
+			<hr> <!--Линия-->
+			<p> div, p, HR, pre</p>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="Text" align="center"><h2> СТРОЧНЫЕ ЭЛЕМЕНТЫ </h2></legend>
+			<p>Обычный текст</p>
+			<p><strong>Жирный, через тег strong</strong></p>
+			<p><b>Жирный, через тег b</b></p>
+			<p><em>Курсив, через тег em</em></p>
+			<p><i>Курсив, через тег i</i></p>
+			<p><b><i>Жирный + курсив</b></i></p>
+			<p><strike>Зачеркнутый текст</strike></p>
+			<p><big>Большая строчка</big></p>
+			<p><small>Маленькая строчка</small></p>
+			<p><sub>Нижний индекс sub</sub> обычный текст <sup>Верхний индекс sup</sup> <b>Пример:</b> H<sub>2</sub>0, X<sup>y</sup></p>
+			<p align="left">Выравнивание по левому краю</p>
+			<p align="center">Выравнивание по центру</p>
+			<p align="right">Выравнивание по правому краю</p>
+			<p align="justify">Выравнивание по ширине</p>
+			<HR>
+			<p align="center"  colspan="4"><marquee>Бегущая строка</marquee></p>
+			<pre><!--Pre - предварительно отформатированный текст-->
+			behavior - задаёт тип движения содержимого контейнера
+			bgcolor - цвет фона.
+			direction - указывает направление движения содержимого контейнера
+			height - высота области прокрутки.
+			hspace - горизонтальные поля вокруг контента.
+			loop - задаёт, сколько раз будет прокручиваться содержимое.
+			scrollamount - скорость движения контента.
+			scrolldelay - величина задержки в миллисекундах между движениями.
+			truespeed - отменяет встроенный ограничитель скорости при низких значениях атрибута scrolldelay.
+			vspace - вертикальные поля вокруг содержимого.
+			width - ширина области прокрутки.</pre>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="SP" align="center"><h2> СПИСКИ </h2></legend>
+			<ol start="0">
+				<b>Нумерованный список</b>
+				<li class="new">start="0" - список начинается с 0</li>
+				<li>type="1" - нумерация по умолчанию</li>
+				<li class="new">type="A" - пункты обозначаются прописными латинскими буквами</li>
+				<li>type="a" - ...строчными латинскими буквами</li>
+				<li>type="I" - ...прописными римскими цифрами</li>
+				<li>type="i" - ...строчными строчными римскими</li>
+			</ol>
+			<ul>
+				<b>Маркерованный список</b>
+				<li>type="disk"</li>
+				<li>type="circle"</li>
+				<li>type="square"</li>
+			</ul>
+			<dl id=myList>
+				<b>Список определений</b>
+				<dt>Термин 1</dt>
+				<dd>Определение термина 1</dd>
+				<dt>Термин 2</dt>
+				<dd>Определение термина 2</dd>
+				<dt>Термин 3</dt>
+				<dd>Определение термина 3</dd>
+			</dl>
+				<ol>
+				<li>Первый элемент
+					<ol>
+						<li>Второй уровень
+							<ol>
+								<li>Третий уровень
+									<ol>
+										<li>Четвёртый уровень</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li>Второй элемент</li>
+				</ol>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="img" align="center"><h2> ИЗОБРАЖЕНИЕ + ТЕКСТ </h2></legend>
+			<a href="http://google.ru" target="_blank"><img src="img/001.jpg" wigth="600" heigth="595" border="0" alt="Альтернативный текст, если отображение картинок отключено" align="left" hspace="30" vspace="30"></a> <!-- W-шширина, H-высота-->
+			<p>Why does it feel like night today</p>
+			<p>Something in here's not right today</p>
+			<p>Why am I so uptight today?</p>
+			<p>Paranoia's all I got left</p>
+			<p>I don't know what stressed me first</p>
+			<p>Or how the pressure was fed / but</p>
+			<p>I know just what it feels like</p>
+			<p>To have a voice in the back of my head</p>
+			<p>It's like a face that I hold inside</p>
+			<p>A face that awakes when I close my eyes</p>
+			<p>A face watches every time I lie A <mark>face</mark> that laughs every time I fall And watches everything So I know that when it's time to sink or swim That the face inside is hearing me / right underneath my skin?</p>
+			<p>I know I've got a face in me Points out all my mistakes to me You've got a face on the inside too Your paranoia's probably worse I don't know what set me off first But I know what I can't stand Everybody acts like the fact of the matter is I can't add up to what you can but</p>
+			<p>Everybody has a face that they hold inside A face that awakes when I close my eyes A face that watches every time they lie A face that laughs every time they fall And watches everything</p>
+			<p>[x2] It's like I'm paranoid lookin' over my back It's like a whirlwind inside of my head It's like I can't stop what I'm hearing within It's like the face inside is right beneath my skin</p>
+			<p>The face inside is right beneath your skin [x3]</p>
+			<p>The sun goes down I feel the light betray me The sun goes down I feel the light betray me</p>
+			<p>The sun I feel the light betray me The sun I feel the light betray me</p>
+			<p>It's like I'm paranoid lookin' over my back It's like a whirlwind inside of my head It's like I can't stop what I'm hearing within It's like the face inside is right beneath my skin</p>
+			<p>It's like I'm paranoid lookin' over my back It's like a whirlwind inside of my head It's like I can't stop what I'm hearing within It's like I can't stop what I'm hearing within It's like I can't stop what I'm hearing within It's like the face inside is right beneath my skin</p>
+			<p><blockquote> blockquote - предназначен для выделения длинных цитат, которые могут состоять из нескольких абзацев. Тег выделяет цитату как отдельный блок текста с отступами.</blockquote></p>
+			<p><q> q - предназначен для выделения коротких цитат в предложениях. Текст внутри этого тега автоматически обрамляется кавычками.</q></p>
+			<p><cite> cite - пользуется для того, чтобы выделить источник цитаты, название произведения или автора цитаты.</cite></p>
+			<p align="center" ><img src="img/2.jpg" wigth="604" heigth="348" border="0" alt="Альтернативный текст, если отображение картинок отключено" hspace="30" vspace="30" usemap="#image-map"></p>
+			<map name="image-map">
+				<area target="" alt="" title="" href="google.ru" coords="2,0,300,346" shape="rect">
+				<area target="" alt="" title="" href="yandex.ru" coords="302,2,603,344,332,20" shape="rect">
+			</map>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="link" align="center"><h2> ССЫЛКА </h2></legend>
+			<a href="https://www.google.ru" target="_blank" title="GOOGLE">Google.ru</a> <!--target="_blank" открывает ссылку в новом вкладке -->
+			<p><a href="img/001.jpg">Скачать картинку</a></p>
+			<p><a href="mailto:asd@Gmail.com">e-mail</a></p>
+			<p><a href="#Start">Перейти к началу статьи</a></p>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="tbl" align="center"><h2> ТАБЛИЦА </h2></legend>
+			<table border="1" width="750" align="center" cellpadding="10" cellspacing="5">
+				<caption>Название таблицы<cаption>
+				<tr>
+					<th colspan="5">Основные атрибуты таблицы HTML</th>
+				</tr>
+				<tr align="center">
+					<td rowspan="2">rowspan="число ячеек, которые должны быть объединены по вертикали"</td>
+					<td colspan="3">colspan="число ячеек, которые должны быть объединены по горизонтали"</td>
+				</tr>
+				<tr align="center">
+					<td>border="число" - толщина рамки </td>
+					<td>bordercolor цвет... - цвет рамки</td>
+					<td>cellpadding="число" - отступ от текста до края ячейки</td>
+				</tr>
+				<tr align="center">
+					<td bgcolor="#87CEEB">bgcolor=#... - заливка ячейки"</td>
+					<td>width="число" - ширина таблицы</td>
+					<td>align - выравнивание содержимого ячейки</td>
+					<td>cellspacing="число" - расстояние между ячейками</td>
+				</tr>
+			</table>
+			<table>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="frm" align="center"><h2> ФОРМЫ </h2></legend>
+			<form action="formdata.php" method="POST"  name="form1">
+				<fieldset>  <!-- Рамка -->
+					<Legend>Ввод личных данных</legend>
+					<p><label>Введите логин (16 символов макс.):<input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя"></label></p>
+					<p><label>Введите пароль (20 символов макс.): <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль"></label></p>
+					<p><input type="submit" value="Войти"></p>
+				</fieldset>
+				<p>Доп.информация:</p>
+				<textarea name="dop" cols="30" rows="6">Текст...</textarea> <!-- readonly -->
+				<p><input type="reset" name="reset" value="Очистить"> <input type="submit" name="submit" value="Отправить"></p>
+				<p><input type="image" src="img/otpravit.png" name="imagebutton"></p>
+				<p><input type="button" value="Кнопка" name="button"></p>
+			</form>
+		</fieldset><br>
+		<fieldset>
+			<Legend id="rk" align="center"><h2> РАДИОКНОПКИ И ЧЕКБОКСЫ </h2></legend>
+			<p>Вопрос 1</p>
+			<p><label>Ответ 1<input type="radio" name="otv1" value="1" checked></label> <label>Ответ 2<input type="radio" name="otv1" value="2"></label></p>
+			<p>Вопрос 2</p>
+			<label><input type="checkbox" name="otv21">Ответ 1</label>
+			<label><input type="checkbox" name="otv22">Ответ 2</label>
+			<label><input type="checkbox" name="otv23" disabled>Ответ 3</label> <!-- Disabled -->
+			<label><input type="checkbox" name="otv24">Ответ 4</label></p>
+			<p>Вопрос 3</p>
+			<p><select name="otv3"> <!--Есть атрибуты size, multiple, value-->
+			<option>Ответ 1</option> <!--Есть атрибут selected-->
+			<option>Ответ 2</option>
+			<option>Ответ 3</option>
+			<option>Ответ 4</option>
+			<option>Ответ 5</option>
+			<option>Ответ 6</option>
+			</select></p>
+			<input type="file" name="file">
+		</fieldset>
+			<!--Тег del выделяет текст, который был удалён в новой версии документа.datetime-->
+			<!--Тег ins  выделяет текст, который был добавлен в новой версии документа..datetime-->
+	</body>
+</html>
