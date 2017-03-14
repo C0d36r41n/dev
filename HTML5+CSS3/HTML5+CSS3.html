@@ -5,6 +5,7 @@
 		<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
 		<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
 		<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
+		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
 		<link rel="stylesheet" type="text/css" href="CSS/style.css"> <!--Подключение CSS-->
 	</head>
 	<body>
@@ -27,6 +28,7 @@
 		<div class="content">
 			<fieldset> <!-- Рамка -->
 				<Legend id="SHTMLS" align="center"><h2>Структура HTML-страницы</h2></legend>
+				<p>В ST вводим "html" и жмем Tab</p>
 				<pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -35,6 +37,7 @@
     &lt;title&gt;ЗАГОЛОВОК ВО ВКЛАДКЕ&lt;/title&gt;
     &lt;meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"&gt;  -- Ключевые слова на странице для поисковиков
     &lt;meta name="description" content="Работа с HTML"&gt; -- Краткое описание страницы для поисковиков
+    &lt;llink rel="shortcut icon" type="image/x-icon" href="img/icon.png"&gt;  -- Иконка
     &lt;link rel="stylesheet" type="text/css" href="CSS/style.css"&gt; -- Подключение CSS-стилей
     &lt;/head&gt;
 &lt;body&gt;
@@ -142,9 +145,9 @@ width - ширина области прокрутки.
 				<p class="primer">box-sizing: content-box | border-box</p>
 				<dl >
 				<dt>content-box</dt>
-				<dd>Основывается на стандартах CSS, при этом свойства width и height задают ширину и высоту контента и не включают в себя значения отступов, полей и границ.</dd>
+					<dd>Основывается на стандартах CSS, при этом свойства width и height задают ширину и высоту контента и не включают в себя значения отступов, полей и границ.</dd>
 				<dt>border-box</dt>
-				<dd>Свойства width и height включают в себя значения полей (padding) и границ (border), но не отступов (margin).</dd>
+					<dd>Свойства width и height включают в себя значения полей (padding) и границ (border), но не отступов (margin).</dd>
 				</dl>
 				<a href="http://simonenko.su/32197993404/use-css3-box-sizing#" target="_blank">Статья</a>
 					<hr>
@@ -165,7 +168,7 @@ width - ширина области прокрутки.
 						<dd>Элемент выводится как блочный и добавляется маркер списка.</dd><br>
 					<dt>none</dt>
 						<dd>Временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница формируется так, словно элемента и не было. Изменить значение и сделать вновь видимым элемент можно с помощью скриптов, обращаясь к свойствам через объектную модель. В этом случае происходит переформатирование данных на странице с учётом вновь добавленного элемента.</dd><br>
-					<dt>run-in</dt>
+					<dt><rp></rp>un-in</dt>
 						<dd>Устанавливает элемент как блочный или строчный в зависимости от контекста.</dd><br>
 					<dt>table</dt>
 						<dd>Определяет, что элемент является блочной таблицей подобно использованию &lt;table&gt;.</dd><br>
@@ -302,7 +305,7 @@ width - ширина области прокрутки.
 				<p>Paranoia's all I got left</p>
 				<p>I don't know what stressed me first</p>
 				<p>Or how the pressure was fed / but</p>
-				<p>I know just what it feels like</p>
+				<p>I know just what it feels like</p>`
 				<p>To have a voice in the back of my head</p>
 				<p>It's like a face that I hold inside</p>
 				<p>A face that awakes when I close my eyes</p>
