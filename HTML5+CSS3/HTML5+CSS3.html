@@ -11,20 +11,20 @@
 	<body>
 		<div class="menu">
 			<h3 id="Start" >ОГЛАВЛЕНИЕ</h3>
-				<ul>
-					<li><b><a href="#SHTMLS">СТРУКТУРА HTML-СТРАНИЦЫ</a></b></li>
-					<li><b><a href="#BE">БЛОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
-					<li><b><a href="#SE">СТРОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
-					<li><b><a href="#MD">МОДЕЛЬ ДОКУМЕНТА</a></b></li>
-					<li><b><a href="#PZ">ПОЗИЦИОНИРОВАНИЕ</a></b></li>
-					<li><b><a href="#SP">СПИСКИ</a></b></li>
-					<li><b><a href="#IT">ТЕКСТ + ИЗОБРАЖЕНИЕ</a></b></li>
-					<li><b><a href="#link">ССЫЛКА</a></b></li>
-					<li><b><a href="#tbl">ТАБЛИЦА</a></b></li>
-					<li><b><a href="#frm">ФОРМЫ</a></b></li>
-					<li><b><a href="#rk">РАДИОКНОПКИ И ЧЕКБОКСЫ</a></b></li>
-					<li><b><a href="#css">CSS</a></b></li>
-				</ul>
+			<ul>
+				<li><b><a href="#SHTMLS">СТРУКТУРА HTML-СТРАНИЦЫ</a></b></li>
+				<li><b><a href="#BE">БЛОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
+				<li><b><a href="#SE">СТРОЧНЫЕ ЭЛЕМЕНТЫ</a></b></li>
+				<li><b><a href="#MD">МОДЕЛЬ ДОКУМЕНТА</a></b></li>
+				<li><b><a href="#PZ">ПОЗИЦИОНИРОВАНИЕ</a></b></li>
+				<li><b><a href="#SP">СПИСКИ</a></b></li>
+				<li><b><a href="#IT">ТЕКСТ + ИЗОБРАЖЕНИЕ</a></b></li>
+				<li><b><a href="#link">ССЫЛКА</a></b></li>
+				<li><b><a href="#tbl">ТАБЛИЦА</a></b></li>
+				<li><b><a href="#frm">ФОРМЫ</a></b></li>
+				<li><b><a href="#rk">РАДИОКНОПКИ И ЧЕКБОКСЫ</a></b></li>
+				<li><b><a href="#css">CSS</a></b></li>
+			</ul>
 		</div>
 		<div class="content">
 			<fieldset> <!-- Рамка -->
@@ -56,14 +56,15 @@
 				<h4>Заголовок h4</h4>
 				<h5>Заголовок h5</h5>
 				<h6>Заголовок h6</h6>
-					<hr> <!--Линия / Разделитель-->
+				<hr> <!--Линия / Разделитель-->
 				<p><span class="teg">&lt;HR&gt;</span> - рисует горизонтальную линию, которая по своему виду зависит от используемых параметров, а также браузера. Имеет атрибуты align, color, noshade, size, width</p>
 				<p><span class="teg">&lt;div&gt;...&lt;/div&gt;</span> - универсальный блочный элемент. Предназначен для группирования элементов документа с целью изменения вида содержимого через стили. Для этого добавляется атрибут class или id с именем класса или идентификатора.</p>
 				<p><span class="teg">&lt;article&gt;...&lt;/article&gt;</span> - задаёт содержание сайта вроде новости, статьи, записи блога, форума и др.</p>
+				<p><span class="teg">&lt;section&gt;...&lt;/section&gt;</span> - Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок.</p>
 				<p><span class="teg">&lt;span&gt;...&lt;/span&gt;</span> - универсальный строчный элемент &lt;span&gt; предназначен для выделения отдельных строк, символов или других строчных элементов для дальнейшего изменения их оформления с помощью стилей. Например, внутри абзаца (&lt;p&gt;) можно изменить цвет и размер первого слова, если его выделить с помощью элемента &lt;span&gt; и задать для него желаемый стиль.</p>
+				<p><span class="teg">&lt;figure&gt;...&lt;/figure&gt;</span> - используется для группирования любых элементов, например, изображений и подписей к ним. Элемент не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться. Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др..</p>
 				<p><span class="teg">&lt;p&gt;...&lt;/p&gt;</span> - определяет текстовый абзац, всегда начинается с новой строки, абзацы текста идущие друг за другом разделяются между собой отбивкой. Величиной отбивки можно управлять с помощью стилей. Если закрывающего тега нет, считается, что конец абзаца совпадает с началом следующего абзаца или другого блочного элемента.</p>
-				<p><span class="teg">&lt;pre&gt;...&lt;/pre&gt;</span> - элемент определяет блок предварительно форматированного текста. Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами. По умолчанию, любое количество пробелов идущих в коде подряд, на веб-странице показывается как один. Элемент позволяет обойти эту особенность и отображать текст как требуется разработчику.</p>
-
+				<p><span class="teg">&lt;pre&gt;...&lt;/pre&gt;</span> - элемент определяет блок предварительно форматированного текста. Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами. По умолчанию, любое количество пробелов идущих в коде подряд, на веб-странице показывается как од ин. Элемент позволяет обойти эту особенность и отображать текст как требуется разработчику.</p>
 			</fieldset><br>
 			<fieldset>
 				<Legend id="SE" align="center"><h2> СТРОЧНЫЕ ЭЛЕМЕНТЫ </h2></legend>
@@ -90,7 +91,7 @@
 				<p class="vircenter">Выравнивание по центру CSS</p>
 				<p class="virright">Выравнивание по правому краю CSS</p>
 				<p iclass="virjustify">Выравнивание по ширине CSS</p>
-					<hr>
+				<hr>
 				<p align="center"  colspan="4"><marquee>Бегущая строка</marquee></p>
 				<pre> <!--Pre - предварительно отформатированный текст-->
 behavior - задаёт тип движения содержимого контейнера
@@ -111,48 +112,48 @@ width - ширина области прокрутки.
 				<p>Стандартная блочная модель отвечает на основной вопрос: cколько же в итоге места будет занимать элемент?</p>
 				<p>Ответ следующий: область, занимаемая блочным элементом, складывается из его ширины и высоты содержания, внутренних и внешних отступов, ширины рамок.</p>
 				<p align="center"><img src="block_model.png"></p>
-				<ul>
-					<li>ширина/высота содержания — свойства width и height (синий прямоугольник на схеме);</li>
-					<li>внутренние отступы — свойство padding;</li>
-					<li>рамки — свойство border;</li>
-					<li>внешние отступы — свойство margin.</li>
-				</ul>
-					<hr>
+					<ul>
+						<li>ширина/высота содержания — свойства width и height (синий прямоугольник на схеме);</li>
+						<li>внутренние отступы — свойство padding;</li>
+						<li>рамки — свойство border;</li>
+						<li>внешние отступы — свойство margin.</li>
+					</ul>
+				<hr>
 				<p><span class="teg">width</span> - ширина. px | % | auto </p>
 				<p class="primer">width: 1000px;</p>
-					<hr>
+				<hr>
 				<p><span class="teg">height</span> - высота. px | % | auto</p>
 				<p class="primer">height: 1000px;</p>
-					<hr>
+				<hr>
 				<p><span class="teg">min-height</span> - задаёт минимальную высоту элемента. Значение высоты элемента будет вычисляться в зависимости от установленных значений свойств height, max-height и min-height. </p>
 				<p class="primer">min-height: px | %</p>
-					<hr>
+				<hr>
 				<p><span class="teg">padding, padding-left, padding-right, padding-top, padding-bottom</span> - внутренние отступы (поля). </p>
 				<p class="primer">padding: 10px; - одинаковые отступы со всех сторон.<br>padding: 5px 10px; - отступы сверху и снизу 5px, справа и слева 10px.<br>padding: 5px 10px 15px; - отступ сверху 5px, слева и справа 10px, снизу 15px.<br>padding: 5px 10px 15px 20px; - разные отступы со всех сторон, в порядке верхний, правый, нижний, левый.</p>
-					<hr>
+				<hr>
 				<p><span class="teg">margin, margin-left, margin-right, margin-top, margin-bottom</span> - внешние отступы.</p>
-				<p class="primer">margin: 10px; - одинаковые отступы со всех сторон.<br>margin: 5px 10px; - сверху и снизу 5px, справа и слева 10px.<br>margin: 5px 10px 15px; - сверху 5px, слева и справа 10px, снизу 15px.<br>margin: 5px 10px 15px 20px; - верхний, правый, нижний, левый отступы соответственно.</p>
-					<hr>
+				<p class="primer">margin: 10px; - одинаковые отступы со всех сторон.<br>margin: 5px 10px; - сверху и снизу 5px, справа и слева 10px.<br>margin: 5px 10px 15px; - сверху 5px, слева и справа 10px, снизу 15px.<brmargin: 5px 10px 15px 20px; - верхний, правый, нижний, левый отступы соответственно.</p>
+				<hr>
 				<p><span class="teg">float</span> - определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. Когда значение свойства float равно none, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той же линии, что и сам элемент.</p>
 				<p class="primer">float: left | right | none</p>
-					<hr>
+				<hr>
 				<p><span class="teg">clear</span> - устанавливает, с какой стороны элемента запрещено его обтекание другими элементами. Если задано обтекание элемента с помощью свойства float, то clear отменяет его действие для указанных сторон.</p>
 				<p class="primer">clear: none | left | right | both</p>
-					<hr>
+				<hr>
 				<p><span class="teg">border, border-top, border-bottom, border-left, border-right.</span> - рамка. Состоит из 3 компонентов: толщина, стиль, цвет.</p>
 				<p class="primer">border: border-width  border-style  border-color;<br>border: 5px solid red;</p>
 				<p align="center"><img src="img/border_style.png"></p>
-					<hr>
+				<hr>
 				<p><span class="teg">box-sizing </span> - применяется для изменения алгоритма расчёта ширины и высоты элемента. Согласно спецификации CSS ширина блока складывается из ширины контента (width), значений отступов (margin), полей (padding) и границ (border). Аналогично обстоит и с высотой блока. Свойство box-sizing позволяет изменить этот алгоритм, чтобы свойства width и height задавали размеры не контента, а размеры блока.</p>
 				<p class="primer">box-sizing: content-box | border-box</p>
-				<dl >
-				<dt>content-box</dt>
-					<dd>Основывается на стандартах CSS, при этом свойства width и height задают ширину и высоту контента и не включают в себя значения отступов, полей и границ.</dd>
-				<dt>border-box</dt>
-					<dd>Свойства width и height включают в себя значения полей (padding) и границ (border), но не отступов (margin).</dd>
-				</dl>
+					<dl >
+						<dt>content-box</dt>
+							<dd>Основывается на стандартах CSS, при этом свойства width и height задают ширину и высоту контента и не включают в себя значения отступов, полей и границ.</dd>
+						<dt>border-box</dt>
+							<dd>Свойства width и height включают в себя значения полей (padding) и границ (border), но не отступов (margin).</dd>
+					</dl>
 				<a href="http://simonenko.su/32197993404/use-css3-box-sizing#" target="_blank">Статья</a>
-					<hr>
+				<hr>
 				<p><span class="teg">display</span> - многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.</p>
 				<p class="primer">display: block | inline | inline-block | inline-table | inline-flex | flex | list-item | none | run-in | table | table-caption | table-cell | table-column-group | table-column | table-footer-group | table-header-group | table-row | table-row-group</p>
 				<dl>
@@ -191,7 +192,7 @@ width - ширина области прокрутки.
 					<dt>table-row-group</dt>
 						<dd>Создаёт структурный блок, состоящий из нескольких строк таблицы аналогично действию &lt;tbody&gt;.</dd>
 				</dl>
-					<hr>
+				<hr>
 				<h2 align="center">«Схлопывание» внешних отступов (margin)</h2>
 				<p>Вертикальный отступ между двумя соседними элементами равен максимальному отступу между ними. Если отступ одного элемента равен 20px, а второго 40px, то отступ между ними будет 40px.</p>
 				<p>Этот эффект называется эффектом «схлопывания» внешних отступов или «схлопывания» маргинов.</p>
@@ -203,10 +204,10 @@ width - ширина области прокрутки.
 				<p>Внешние и внутренние отступы всегда складываются.</p>
 				<h2 align="center">Отцентровка элемента</h2>
 				<p>Чтобы отцентровать блочный элемент, нужно выполнить следующие действия:</p>
-				<ol>
-					<li>Задать элементу ширину, которая меньше ширины родительского контейнера.</li>
-					<li>Задать для внешних отступов справа и слева значение auto.</li>
-				</ol>
+					<ol>
+						<li>Задать элементу ширину, которая меньше ширины родительского контейнера.</li>
+						<li>Задать для внешних отступов справа и слева значение auto.</li>
+					</ol>
 				<p class="primer">selector {<br>width: 100px;<br>margin: 0 auto;<br>}<br><br>selector {<br>width: 100px;<br>margin-left: auto;<br>margin-right: auto;<br>}</p>
 				<h2 align="center">Проблемы обычной блочной модели</h2>
 				<p>В чём проблема описанного механизма расчета ширины?. Ведь можно просто не задавать ширину, используя auto, либо просто подбирать размеры блоков и отступов как на макете.</p>
@@ -234,53 +235,49 @@ width - ширина области прокрутки.
 				<p><span class="teg">top | bottom | left | right</span> - устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.</p>
 				<p class="primer">top | bottom | left | right: px | % | auto</p>
 				<p class="primer">display: inline-block;<br>margin: 10px;<br>background-color: #27ae60;<br>border-radius: 6px;<br>position:relative;<br>top:-5px;</p>
-
-
-
-
 			</fieldset>
 			<fieldset>
 				<Legend id="SP" align="center"><h2> СПИСКИ </h2></legend>
-				<ol start="0">
-					<b>Нумерованный список</b>
-					<li class="new">start="0" - список начинается с 0</li>
-					<li>type="1" - нумерация по умолчанию</li>
-					<li class="new">type="A" - пункты обозначаются прописными латинскими буквами</li>
-					<li>type="a" - ...строчными латинскими буквами</li>
-					<li>type="I" - ...прописными римскими цифрами</li>
-					<li>type="i" - ...строчными строчными римскими</li>
-				</ol>
-				<ul class="ul1">
-					<b>Маркерованный список</b>
-					<li>type="disk"</li>
-					<li>type="circle"</li>
-					<li>type="square"</li>
-				</ul>
-				<dl id="myList">
-					<b>Список определений</b>
-					<dt>Термин 1</dt>
-						<dd>Определение термина 1</dd>
-					<dt>Термин 2</dt>
-						<dd>Определение термина 2</dd>
-					<dt>Термин 3</dt>
-						<dd>Определение термина 3</dd>
-				</dl>
-				<b>Многоуровневый список</b>
-					<ol>
-						<li>Первый элемент
-							<ol>
-								<li>Второй уровень
-									<ol>
-										<li>Третий уровень
-											<ol>
-												<li>Четвёртый уровень</li>
-											</ol>
-										</li>
-									</ol>
-								</li>
-							</ol>
-						</li>
-						<li>Второй элемент</li>
+					<ol start="0">
+						<b>Нумерованный список</b>
+						<li class="new">start="0" - список начинается с 0</li>
+						<li>type="1" - нумерация по умолчанию</li>
+						<li class="new">type="A" - пункты обозначаются прописными латинскими буквами</li>
+						<li>type="a" - ...строчными латинскими буквами</li>
+						<li>type="I" - ...прописными римскими цифрами</li>
+						<li>type="i" - ...строчными строчными римскими</li>
+					</ol>
+					<ul class="ul1">
+						<b>Маркерованный список</b>
+						<li>type="disk"</li>
+						<li>type="circle"</li>
+						<li>type="square"</li>
+					</ul>
+					<dl id="myList">
+						<b>Список определений</b>
+						<dt>Термин 1</dt>
+							<dd>Определение термина 1</dd>
+						<dt>Термин 2</dt>
+							<dd>Определение термина 2</dd>
+						<dt>Термин 3</dt>
+							<dd>Определение термина 3</dd>
+					</dl>
+					<b>Многоуровневый список</b>
+						<ol>
+							<li>Первый элемент
+								<ol>
+									<li>Второй уровень
+										<ol>
+											<li>Третий уровень
+												<ol>
+													<li>Четвёртый уровень</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li>Второй элемент</li>
 					</ol>
 			</fieldset><br>
 			<fieldset>
@@ -293,13 +290,13 @@ width - ширина области прокрутки.
 				<p><span class="teg">&lt;del&gt;...&lt;/del&gt;</span> выделяет текст, который был удалён в новой версии документа.</p>
 				<p><span class="teg">&lt;ins&gt;...&lt;/ins&gt;</span> выделяет текст, который был добавлен в новой версии документа.</p>
 				<p class="primer">&lt;del&gt;Текст&lt;/del&gt;</p>
-				<dl>
-					<dt>cite</dt>
-						<dd>Указывает ссылку на документ, где приведена причина редактирования текста и другие подробности.</dd><br>
-					<dt>datetime</dt>
-						<dd>Дата и время редактирования текста.</dd><br>
-				</dl>
-					<hr>
+					<dl>
+						<dt>cite</dt>
+							<dd>Указывает ссылку на документ, где приведена причина редактирования текста и другие подробности.</dd><br>
+						<dt>datetime</dt>
+							<dd>Дата и время редактирования текста.</dd><br>
+					</dl>
+				<hr>
 				<a href="http://google.ru" target="_blank"><img src="img/001.jpg" wigth="600" heigth="595" border="0" alt="Альтернативный текст, если отображение картинок отключено" align="left" hspace="30" vspace="30"></a> <!-- W-шширина, H-высота-->
 				<p>Why does it feel like night today</p>
 				<p>Something in here's not right today</p>
@@ -320,61 +317,61 @@ width - ширина области прокрутки.
 				<p>The sun I feel the light betray me The sun I feel the light betray me</p>
 				<p>It's like I'm paranoid lookin' over my back It's like a whirlwind inside of my head It's like I can't stop what I'm hearing within It's like the face inside is right beneath my skin</p>
 				<p>It's like I'm paranoid lookin' over my back It's like a whirlwind inside of my head It's like I can't stop what I'm hearing within It's like I can't stop what I'm hearing within It's like I can't stop what I'm hearing within It's like the face inside is right beneath my skin</p>
-					<hr>
+				<hr>
 				<p><span class="teg">img</span> - элемент предназначен для отображения на веб-странице изображений в графическом формате GIF, JPEG, SVG или PNG. Адрес файла с картинкой задаётся через атрибут src. Если необходимо, то рисунок можно сделать ссылкой на другой файл, поместив &lt;img&gt; в контейнер &lt;a&gt;.</p>
 				<p>Рисунки также могут применяться в качестве карт-изображений, когда картинка содержит активные области, выступающие в качестве ссылок. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой.</p>
 				<p class="primer">&lt;img src="&lt;адрес&gt;" alt="&lt;текст&gt;"&gt;</p>
-				<dl>
-					<dt>align</dt>
-						<dd>Определяет, как рисунок будет выравниваться по краю и способ обтекания текстом.</dd><br>
-					<dt>alt</dt>
-						<dd>Альтернативный текст для изображения.</dd><br>
-					<dt>border</dt>
-						<dd>Толщина рамки вокруг изображения</dd><br>
-					<dt>height</dt>
-						<dd>Высота изображения.</dd><br>
-					<dt>ismap</dt>
-						<dd>Говорит браузеру, что картинка является серверной картой-изображением.</dd><br>
-					<dt>sizes</dt>
-						<dd>Задаёт размеры изображения для разных макетов страницы.</dd><br>
-					<dt>src</dt>
-						<dd>Путь к графическому файлу.</dd><br>
-					<dt>srcset</dt>
-						<dd>Путь к графическим файлам с учётом размера изображения и устройств.</dd><br>
-					<dt>width</dt>
-						<dd>Ширина изображения.</dd><br>
-					<dt>usemap</dt>
-						<dd>Ссылка на элемент &lt;map&gt; содержащий координаты для клиентской карты-изображения.</dd><br>
-				</dl>
+					<dl>
+						<dt>align</dt>
+							<dd>Определяет, как рисунок будет выравниваться по краю и способ обтекания текстом.</dd><br>
+						<dt>alt</dt>
+							<dd>Альтернативный текст для изображения.</dd><br>
+						<dt>border</dt>
+							<dd>Толщина рамки вокруг изображения</dd><br>
+						<dt>height</dt>
+							<dd>Высота изображения.</dd><br>
+						<dt>ismap</dt>
+							<dd>Говорит браузеру, что картинка является серверной картой-изображением.</dd><br>
+						<dt>sizes</dt>
+							<dd>Задаёт размеры изображения для разных макетов страницы.</dd><br>
+						<dt>src</dt>
+							<dd>Путь к графическому файлу.</dd><br>
+						<dt>srcset</dt>
+							<dd>Путь к графическим файлам с учётом размера изображения и устройств.</dd><br>
+						<dt>width</dt>
+							<dd>Ширина изображения.</dd><br>
+						<dt>usemap</dt>
+							<dd>Ссылка на элемент &lt;map&gt; содержащий координаты для клиентской карты-изображения.</dd><br>
+					</dl>
 				<p align="center" ><img src="img/2.jpg" wigth="604" heigth="348" border="0" alt="Альтернативный текст, если отображение картинок отключено" hspace="30" vspace="30" usemap="#image-map"></p>
 				<map name="image-map">
-					<area target="" alt="" title="" href="google.ru" coords="2,0,300,346" shape="rect">
-					<area target="" alt="" title="" href="yandex.ru" coords="302,2,603,344,332,20" shape="rect">
+				<area target="" alt="" title="" href="google.ru" coords="2,0,300,346" shape="rect">
+				<area target="" alt="" title="" href="yandex.ru" coords="302,2,603,344,332,20" shape="rect">
 				</map>
 				<div id="d1">
-					<h1 class="mh1">Изображение</h1>
+				<h1 class="mh1">Изображение</h1>
 				</div>
 			</fieldset><br>
 			<fieldset>
 				<Legend id="link" align="center"><h2> ССЫЛКА </h2></legend>
 				<p><span class="teg">&lt;a&gt;</span> - ссылка</p>
 				<p class="primer">&lt;a title="Подсказка" href="http://google.ru"&gt;Google&lt;/a&gt;</p>
-				<dl>
-					<dt>download</dt>
-						<dd>Предлагает скачать указанный по ссылке файл.</dd><br>
-					<dt>download</dt>
-						<dd>Предлагает скачать указанный по ссылке файл.</dd><br>
-					<dt>href</dt>
-						<dd>Задаёт адрес документа, на который следует перейти.</dd><br>
-					<dt>hreflang</dt>
-						<dd>Идентифицирует язык текста по ссылке.</dd><br>
-					<dt>rel</dt>
-						<dd>Отношения между ссылаемым и текущим документами.</dd><br>
-					<dt>target</dt>
-						<dd>Имя окна или фрейма, куда браузер будет загружать документ. target="_blank" - открывает в новой вкладке</dd><br>
-					<dt>type</dt>
-						<dd>Указывает MIME-тип документа, на который ведёт ссылка.</dd><br>
-				</dl>
+					<dl>
+						<dt>download</dt>
+							<dd>Предлагает скачать указанный по ссылке файл.</dd><br>
+						<dt>download</dt>
+							<dd>Предлагает скачать указанный по ссылке файл.</dd><br>
+						<dt>href</dt>
+							<dd>Задаёт адрес документа, на который следует перейти.</dd><br>
+						<dt>hreflang</dt>
+							<dd>Идентифицирует язык текста по ссылке.</dd><br>
+						<dt>rel</dt>
+							<dd>Отношения между ссылаемым и текущим документами.</dd><br>
+						<dt>target</dt>
+							<dd>Имя окна или фрейма, куда браузер будет загружать документ. target="_blank" - открывает в новой вкладке</dd><br>
+						<dt>type</dt>
+							<dd>Указывает MIME-тип документа, на который ведёт ссылка.</dd><br>
+					</dl>
 				<a class="bezpod4" href="https://www.google.ru" target="_blank" title="GOOGLE">Google.ru</a> <!--target="_blank" открывает ссылку в новом вкладке -->
 				<p><a href="img/001.jpg">Скачать картинку</a></p>
 				<p><a href="mailto:asd@Gmail.com">e-mail</a></p>
@@ -406,12 +403,12 @@ width - ширина области прокрутки.
 			<fieldset>
 				<Legend id="frm" align="center"><h2> ФОРМЫ </h2></legend>
 				<form action="formdata.php" method="POST" name="form1">
-					<fieldset>
-						<Legend>Ввод личных данных</legend>
-						<p><label>Введите логин (16 символов макс.): </label> <input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя"></label></p>
-						<p><label>Введите пароль (20 символов макс.): </label> <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль"></label></p>
-						<p><input type="submit" value="Войти"></p> <!--Кнопка ВОЙТИ-->
-					</fieldset><br>
+						<fieldset>
+							<Legend>Ввод личных данных</legend>
+							<p><label>Введите логин (16 символов макс.): </label> <input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя"></label></p>
+							<p><label>Введите пароль (20 символов макс.): </label> <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль"></label></p>
+							<p><input type="submit" value="Войти"></p> <!--Кнопка ВОЙТИ-->
+						</fieldset><br>
 					<p>Доп.информация:</p>
 					<textarea name="dop" cols="30" rows="6">Текст...</textarea> <!-- readonly -->
 					<p><input type="reset" name="reset" value="Очистить"> <input type="submit" name="submit" value="Отправить"></p>

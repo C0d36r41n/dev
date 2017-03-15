@@ -1,0 +1,13 @@
+http://html-academy.ru/codeguide/
+
+http://codeguide.co/
+
+http://sadcitizen.me/code-guide/
+
+https://github.com/google/styleguide
+
+http://cssguidelin.es/
+
+http://primercss.io/guidelines/
+
+https://github.com/necolas/idiomatic-css
