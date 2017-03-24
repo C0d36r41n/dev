@@ -331,3 +331,10 @@ selector {
 }
 */
 
+/* псевдораспорка для плавающих блоков
+.row::after {
+content: "";
+display:table;
+clear:both;
+}
+*/
