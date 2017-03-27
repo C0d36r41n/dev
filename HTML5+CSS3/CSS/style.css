@@ -16,9 +16,9 @@ body {
 }
 
 .main-menu ul {
-    padding-left: 600px;
-    list-style: none;
-  }
+ padding-left: 600px;
+ list-style: none; /*убираем маркеры*/
+ }
 
   .main-menu li {
     display: inline-block;
@@ -29,8 +29,6 @@ body {
   color: #DC143C;
   font-weight:bold;
 }
-
-
 
 .example {
 border-width:1px; /*Толщина рамки*/
@@ -47,6 +45,22 @@ background-color:#DEDEDE; /*Цвет фона*/
   position:fixed; /*ЗАКРЕПЛЕНИЕ МЕНЮ НА ЭКРАНЕ*/
   left: 300px; /*ПОИЗИЦИОНИРОВАНИЕ МЕНЮ*/
   font-size: 15px;
+  font-weight:bold;
+}
+
+.menu a {
+text-decoration: none; /*убираем подчеркивание у ссылок*/
+border: 1px solid #e5e5e5;
+margin-bottom: -1px;
+padding: 3px 3px;
+display: block;
+}
+
+.menu ul {
+ list-style: none; /*убираем маркеры*/
+ margin: 0;
+ padding: 10px 15px;
+ line-height: 1,2; /*межстрочный интервал*/
 }
 
 p, h4, #myList {
@@ -78,6 +92,7 @@ color: #ffffff;
 opacity: 0.5; /*Прозрачность*/
 }
 
+
 #sections:hover { /*Изменение при наведении*/
 opacity: 1;
 }
@@ -92,7 +107,7 @@ color: #cc0000;
 
 /*a { - Статичный цвет ссылки при всех действиях
   color: #111111;
-}*/ 
+}*/
 
 a:link{ /*Цвет не нажатой ссылки*/
   color: #111111;
@@ -102,8 +117,11 @@ a:visited { /*Посещенная ссылка*/
 color: #FAA21A;
 }
 
-a:hover { /*СОБЫТИЙНЫЙ СЕЛЕКТОР. Цвет ссылки при наведении на нее курсора*/
+.menu a:hover { /*СОБЫТИЙНЫЙ СЕЛЕКТОР. Цвет ссылки при наведении на нее курсора*/
 color: #800000;
+background: #cc3333;
+color: #ffffff;
+opacity: 0.5; /*Прозрачность*/
 }
 
 a:active { /*Цвет ссылки в момент клика*/
