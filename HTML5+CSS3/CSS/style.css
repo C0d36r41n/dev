@@ -30,7 +30,7 @@ body {
   font-weight:bold;
 }
 
-.example {
+.example { /*ПРИМЕР*/
 border-width:1px; /*Толщина рамки*/
 border-style:solid; /*Стиль рамки. Dotted | Dashed | Double | Groove | Ridge | Inset | Outset*/
 border-color:#A9A9A9; /*Цвет рамки*/
