@@ -261,7 +261,45 @@ input[type="submit"] { /*ЦВЕТ РАМКИ У КНОПКИ*/
     border-color: green;
 }
 
+.social-networks { /*Соцсети*/
+    width: 270px;
+    margin: 0 auto;
+    margin-top: 120px;
+    padding: 10px;
+    padding-left: 20px;
+    background: #ecf0f1;
+}
 
+.social-networks b {
+    margin-right: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #7f8c8d;
+}
+
+.social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: #bdc3c7 url("../img/social.png") no-repeat;
+    vertical-align: middle;
+}
+
+.social-vk {
+    background-color: #6d8fb3;
+    background-position: 0px -120px;
+}
+
+.social-fb {
+    background-color: #526da3;
+    background-position: 0px -60px;;
+}
+
+.social-tw {
+    background-color: #73bfe6;
+    background-position: 0px 0px;;
+}
 
 /* tr {
   border-bottom: 2px solid lightgray; - ОТОБРАЖАЕТ ТОЛЬКО НИЖНИЕ РАМКИ ТАБЛИЦЫ
