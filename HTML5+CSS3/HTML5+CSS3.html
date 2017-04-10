@@ -44,7 +44,7 @@
 		</div>
 		<div class="content">
 			<fieldset> <!-- Рамка -->
-				<Legend id="SHTMLS" align="center"><h2>Структура HTML-страницы</h2></legend>
+				<Legend id="SHTMLS"><h2>Структура HTML-страницы</h2></legend>
 				<p>В ST вводим "html" и жмем Tab</p>
 				<pre>
 &lt;!1 html&gt;
@@ -90,7 +90,7 @@
 				<p><span class="teg">&lt;pre&gt;...&lt;/pre&gt;</span> - элемент определяет блок предварительно форматированного текста. Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами. По умолчанию, любое количество пробелов идущих в коде подряд, на веб-странице показывается как од ин. Элемент позволяет обойти эту особенность и отображать тт как требуется разработчику.</p>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="SE" align="center"><h2> СТРОЧНЫЕ ЭЛЕМЕНТЫ </h2></legend>
+				<Legend id="SE"><h2> СТРОЧНЫЕ ЭЛЕМЕНТЫ </h2></legend>
 				<p><span class="teg">&lt;span&gt;...&lt;/span&gt;</span> - универсальный строчный элемент предназначен для выделения отдельных строк, символов или других строчных элементов для дальнейшего изменения их оформления с помощью стилей. Например, внутри абзаца (&lt;p&gt;) можно изменить цвет и размер первого слова, если его выделить с помощью элемента &lt;span&gt; и задать для него желаемый стиль.</p>
 				<p>Обычный текст</p>
 				<p><strong>Жирный, через тег strong</strong></p>
@@ -132,7 +132,7 @@ width - ширина области прокрутки.
 				</pre>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="MD" align="center"><h2> МОДЕЛЬ ДОКУМЕНТА </h2></legend>
+				<Legend id="MD"><h2> МОДЕЛЬ ДОКУМЕНТА </h2></legend>
 				<p>Стандартная блочная модель отвечает на основной вопрос: cколько же в итоге места будет занимать элемент?</p>
 				<p>Ответ следующий: область, занимаемая блочным элементом, складывается из его ширины и высоты содержания, внутренних и внешних отступов, ширины рамок.</p>
 				<p align="center"><img src="img/block_model.png"></p>
@@ -240,7 +240,7 @@ width - ширина области прокрутки.
 				<p>Ширина 100% заставит поля быть такой же ширины, как родительский блок, а паддинг добавит отступы. Но, как вы уже догадались, за счет отступов поле станет шире своего контейнера. Попрактикуемся.</p>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="PZ" align="center"><h2>ПОЗИЦИОНИРОВАНИЕ </h2></legend>
+				<Legend id="PZ"><h2>ПОЗИЦИОНИРОВАНИЕ </h2></legend>
 				<p><span class="teg">position</span> - устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.</p>
 				<p class="example">position: absolute | fixed | relative | static | sticky</p>
 				<dl>
@@ -260,7 +260,7 @@ width - ширина области прокрутки.
 				<p class="example">display: inline-block;<br>margin: 10px;<br>background-color: #27ae60;<br>border-radius: 6px;<br>position:relative;<br>top:-5px;</p>
 			</fieldset>
 			<fieldset>
-				<Legend id="SP" align="center"><h2> СПИСКИ </h2></legend>
+				<Legend id="SP"><h2> СПИСКИ </h2></legend>
 					<ol start="0">
 						<b>Нумерованный список</b>
 						<li class="new">start="0" - список начинается с 0</li>
@@ -304,7 +304,7 @@ width - ширина области прокрутки.
 					</ol>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="IT" align="center"><h2>ТЕКСТ + ИЗОБРАЖЕНИЕ</h2></legend>
+				<Legend id="IT"><h2>ТЕКСТ + ИЗОБРАЖЕНИЕ</h2></legend>
 				<p><blockquote><span class="teg">blockquote</span>- предназначен для выделения длинных цитат, которые могут состоять из нескольких абзацев. Тег выделяет цитату как отдельный блок текста с отступами.</blockquote></p>
 				<p><q><span class="teg">q</span> - предназначен для выделения коротких цитат в предложениях. Текст внутри этого тега автоматически обрамляется кавычками.</q></p>
 				<p><cite><span class="teg">cite</span> - пользуется для того, чтобы выделить источник цитаты, название произведения или автора цитаты.</cite></p>
@@ -401,7 +401,7 @@ width - ширина области прокрутки.
 				</div>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="link" align="center"><h2> ССЫЛКА </h2></legend>
+				<Legend id="link"><h2> ССЫЛКА </h2></legend>
 				<p><span class="teg">&lt;a&gt;</span> - ссылка</p>
 				<p class="example">&lt;a title="Подсказка" href="http://google.ru"&gt;Google&lt;/a&gt;</p>
 					<dl>
@@ -426,7 +426,7 @@ width - ширина области прокрутки.
 				<p><a href="#Sections">Перейти к началу статьи</a></p> <!--Якорь-->
 			</fieldset><br>
 			<fieldset>
-				<Legend id="video" align="center"><h2> ВИДЕО </h2></legend>
+				<Legend id="video"><h2> ВИДЕО </h2></legend>
 				<p><span class="teg">video</span> - добавляет, воспроизводит и управляет настройками видеоролика на веб-странице. Путь к файлу задаётся через атрибут src или вложенный элемент &lt;source&gt;</p>
 				<p class="example">&lt;video&gt;<br>
  				&lt;source src="<адрес>"&gt;<br>
@@ -451,7 +451,7 @@ width - ширина области прокрутки.
 				</dl>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="audio" align="center"><h2> АУДИО </h2></legend>
+				<Legend id="audio"><h2> АУДИО </h2></legend>
 				<p><span class="teg">audio</span> - добавляет, воспроизводит и управляет настройками аудиозаписи на веб-странице. Путь к файлу задаётся через атрибут src или вложенный элемент &lt;source&gt;. Внутри контейнера &lt;audio&gt; можно написать текст, который будет выводиться в браузерах, не работающих с этим элементом.</p>
 				<p class="example">&lt;audio src="URL"&gt;&lt;/audio&gt;</p>
 				<dl>
@@ -468,7 +468,7 @@ width - ширина области прокрутки.
 				</dl>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="tbl" align="center"><h2> ТАБЛИЦА </h2></legend>
+				<Legend id="tbl"><h2> ТАБЛИЦА </h2></legend>
 				<table>
 					<tr>
 						<th colspan="5">Основные атрибуты таблицы HTML</th>
@@ -491,22 +491,81 @@ width - ширина области прокрутки.
 				</table>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="frm" align="center"><h2> ФОРМЫ </h2></legend>
-				<form action="formdata.php" method="POST" name="form1">
+				<Legend id="frm"><h2> ФОРМЫ </h2></legend>
+				<form action="formdata.php" method="POST" name="form1" oninput="daysoutput.value=dayscount.value">
 						<fieldset>
 							<Legend>Ввод личных данных</legend>
-							<p><label>Введите логин (16 символов макс.): </label> <input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя"></label></p>
-							<p><label>Введите пароль (20 символов макс.): </label> <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль"></label></p>
-							<p><input type="submit" value="Войти"></p> <!--Кнопка ВОЙТИ-->
+							<p><label>Введите логин (16 символов макс.): </label> <input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя" required></label></p>
+							<p><label>Введите пароль (20 символов макс.): </label> <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль" autocomplete="off" required></label></p>
+							<p><input type="submit" value="ВОЙТИ"></p> <!--Кнопка ВОЙТИ-->							
 						</fieldset><br>
+					<label for="date">Дата</label> 
+                    <input type="date" name="date">
+                    <label for="day">Число</label>                    
+                    <input type="number" min="1" max="31" name="day">           
+                    <label for="month">Месяц</label>                    
+                    <input type="month" name="month"><br><br>     
+                    <label for="dayscount">Количество дней</label>
+                    <output name="daysoutput"></output><br>
+                    1 <input type="range" id="dayscount" name="dayscount" min="1" max="14" step="1"> 14  <br><br> 
+                   	<label for="food">Любимая еда</label>
+                      <select id="food" name="food" multiple>
+                          <optgroup label="Вкуснятина">	
+                            <option value="meat">Мясо</option>
+                            <option value="fish">Рыба</option>
+                            <option value="chi">Курочка</option>
+                            <option value="ind">Индейка</option>
+                            <option value="mice">Мыши</option>
+                          </optgroup>
+                          <optgroup label="Сойдёт">
+                            <option value="milk">Молоко</option>
+                            <option value="kef">Кефир</option>
+                            <option value="water">Вода</option>
+                            <option value="smet">Сметана</option>
+                          </optgroup>
+                           </select><br><br>
+                   <label for="date">Время</label>
+	                <input type="time" name="time"><br><br>
+                    <label for="dish">Блюдо</label>
+	                    <input type="text" id="dish" name="dish" list="dishes">
+	                    	<datalist id="dishes">
+	                        <option value="Мясо">
+	                        <option value="Рыба">
+	                        <option value="Курочка">
+	                    	</datalist><br><br>		
+	                <label for="amount">Количество</label>
+                    <input type="number" min="5" max="50" step="5" id="amount" name="amount" ><br><br>	
+                    <label for="search">Поиск</label>		
+                    <input type="search" name="search"><br><br>
+                    <p><span class="teg">pattern</span> - указывает регулярное выражение, согласно которому требуется вводить и проверять данные в поле формы. Если присутствует атрибут pattern, то форма не будет отправляться, пока поле не будет заполнено правильно.</p> <!--Добавь подбробное описание атрибута-->
+                    <p class="example"><label for="passport">Номер паспорта</label>            
+                    <input type="text" name="passport" pattern="[0-9]{3}-[0-9]{5}" placeholder="Формат номера XXX-XXXXX" required></p> 
+                    <label for="tel">Номер телефона</label>
+                    <input type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Формат номера X-XXX-XXX" required><br><br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required><br><br>
+                    <label for="url">Личный сайт</label>
+                    <input type="url" name="url" required>
 					<p>Доп.информация:</p>
-					<textarea name="dop" cols="30" rows="6">Текст...</textarea> <!-- readonly -->
+					<textarea name="dop" cols="30" rows="6">Текст...</textarea><br>
+					<label for="color">Цвет</label>                       
+                    <input type="color" name="color">
 					<p><input type="reset" name="reset" value="Очистить"> <input type="submit" name="submit" value="Отправить"> <input type="button" value="Просто кнопка" name="button"</p>
 					<p><input type="image" src="img/otpravit.png" name="imagebutton" alt="Отправить"></p>
+					<p><span class="teg">autofocus</span> - атрибут устанавливает, что кнопка/поле получает фокус после загрузки страницы. Атрибут должен быть только один на странице.</p>
+					<p><span class="teg">readonly</span> - не дает пользователю изменять поле (вводить новый текст, модифицировать существующий). Введенное значение можно выделить и скопировать. Данные из этого поля отправляются на сервер.</p>
+					<p class="example"><label for="url">Личный сайт</label>
+                    <input type="url" id="url" name="url" value="http://ya.ru" readonly></p>
+					<p><span class="teg">disabled</span> - не дает пользователю изменять поле (вводить новый текст, модифицировать существующий). Нельзя поставить фокус в это поле, введенное значение нельзя выделять и копировать. Данные из этого поля НЕ отправляются на сервер.</p>
+					<p class="example"><label for="url">Личный сайт</label>
+                    <input type="url" id="url" name="url" value="http://ya.ru" disabled></p>
+                    <p><span class="teg">autocomplete</span> - атрибут помогает заполнять поля форм текстом, который был введён в них ранее. Значения on | off</p>  
+                    <p><span class="teg">tabindex</span> - атрибут устанавливает порядок получения фокуса при переходе между элементами с помощью клавиши Tab. Переход происходит от меньшего значения к большему, например от 1 к 2, затем к 3 и так далее. При этом строгая последовательность не важна, допускается пропускать какие-то числа и начинать с любой цифры. Если значения tabindex у элементов совпадают, тогда учитывается их порядок появления в коде. Заблокированные элементы (у которых установлен атрибут disabled) не участвуют в переходе и фокус не получают.</p>
+                    <p class="example">tabindex="<число>"</p>                       
 				</form>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="rk" align="center"><h2> РАДИОКНОПКИ И ЧЕКБОКСЫ </h2></legend>
+				<Legend id="rk"><h2> РАДИОКНОПКИ И ЧЕКБОКСЫ </h2></legend>
 				<p>Вопрос 1</p>
 					<p><label>Ответ 1<input type="radio" name="otv1" value="1" checked></label> <label>Ответ 2<input type="radio" name="otv1" value="2"></label></p>
 				<p>Вопрос 2</p>
@@ -542,7 +601,7 @@ width - ширина области прокрутки.
 		       	</div>
 			</fieldset><br>
 			<fieldset>
-				<Legend id="css" align="center"><h2> CSS </h2></legend>
+				<Legend id="css"><h2> CSS </h2></legend>
 				<h2>Селекторы</h2>
 				<p><span class="teg">p {...}</span> - по тегу</p>
 				<p><span class="teg">.title {...}</span> - по классу</p>
