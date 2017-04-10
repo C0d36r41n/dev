@@ -301,6 +301,159 @@ input[type="submit"] { /*ЦВЕТ РАМКИ У КНОПКИ*/
     background-position: 0px 0px;;
 }
 
+.paginator { /*ПЕРЕКЛЮЧАТЕЛЬ СТРАНИЦ*/
+text-align: center;
+}
+
+.paginator a, .paginator span {
+display: inline-block;
+    min-width: 20px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #95a5a6;
+}
+.paginator-arrows {
+    width: 280px;
+    margin: 30px auto;
+    padding: 10px;
+    white-space: nowrap;
+    background: #ecf0f1;
+}
+
+.paginator-arrows a, .paginator-arrows span {
+    display: inline-block;
+    min-width: 20px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #95a5a6;
+}
+
+.paginator-arrows .prev {
+    margin-right: 20px;
+    text-indent: -1000px;
+    background-image: url("../img/arrows.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.paginator-arrows .next {
+    margin-left: 20px;
+    text-indent: -1000px;
+    background-image: url("../img/arrows.png");
+    background-position: 0 -40px;
+    background-repeat: no-repeat;
+}
+
+.paginator-arrows .current { /*Выделение цветом текущей страницы*/
+    background-color: #16a085;
+}
+
+.paginator-arrows .disabled { /*инактив кнопки "Назад", когда мы на 1 странице*/
+    opacity: 0.3;
+}
+
+ .paginator a:hover { /*Изменение цвета кнопки страницы при наведении*/
+    background-color: #2ecc71;
+}
+
+.contacts { /*КОНТАКТЫ*/
+    width: 250px;
+    margin: 0 auto;
+    margin-top :80px;
+}
+
+.contacts .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7f8c8c;
+}
+
+.contacts .item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+
+.contacts .icon {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    width: 22px;
+    height: 32px;
+    outline: 2px solid rgba(0, 0, 0, 0.1);
+    background: url("../img/contacts.png") no-repeat 0 0;
+}
+
+.contacts .icon-location {
+    background-position: 0 0;
+}
+
+.contacts .icon-phone {
+    background-position: -30px 0;
+}
+
+.contacts .icon-email {
+    background-position: -60px 0;
+}
+
+.comment { /*КОММЕНТАРИИ*/
+    position: relative;
+    margin-left: 50px;
+    margin-top: 90px;
+    margin-right: 20px;
+}
+
+.comment-avatar {
+  position: absolute;
+    top: 0;
+    left: -40px;
+    width: 70px;
+    height: 70px;
+    background: #7f8c8c url("../img/avatar.png") no-repeat 50% 50%;
+}
+
+.comment-author {
+    padding-left: 45px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment-text {
+    padding: 12px;
+    padding-left: 45px;
+    background: #f8f8f8;
+    border-bottom: 5px solid #e5e6e6;
+}
+
+.comment-date {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #bdc3c7;
+}
+
+.comment-reply { /*Кнопка ОТВЕТ НА КОМЕНТАРИЙ*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    outline: 2px solid rgba(255, 0, 0, 0.1);
+    background: url("../img/reply.png") no-repeat 0 0;
+}
 /* tr {
   border-bottom: 2px solid lightgray; - ОТОБРАЖАЕТ ТОЛЬКО НИЖНИЕ РАМКИ ТАБЛИЦЫ
   vertical-align: middle; - ВЫРАВНИВАНИЕ ТЕКСТА В ЯЧЕЙКЕ ПО ВЕРТИКАЛЕ | top | middle | bottom | baseline | sub | super
