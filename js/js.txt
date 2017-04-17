@@ -1,0 +1,21 @@
+- querySelector() | querySelectorAll()
+Метод поиска элемента
+
+Пример: var link = document.querySelector(".user-block") 
+
+
+
+- addEventListener()
+Метод для отлова диких событий
+
+Пример: link.addEventListener("click",function(){});
+
+
+ 
+-classList
+Набор методов для управления классами
+
+Пример: element.classList.add("modal-content-show");
+
+
+-localStorage 
