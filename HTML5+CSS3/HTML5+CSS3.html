@@ -6,7 +6,7 @@
 		<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
 		<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
 		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
-		<link rel="stylesheet" type="text/css" href="CSS/style.css"> <!--Подключение CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css"> <!--Подключение CSS-->
 	</head>
 	<body>
 		<header class="page-header">
@@ -55,7 +55,7 @@
     &lt;meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"&gt;  -- Ключевые слова на странице для поисковиков
     &lt;meta name="description" content="Работа с HTML"&gt; -- Краткое описание страницы для поисковиков
     &lt;link rel="shortcut icon" type="image/x-icon" href="img/icon.png"&gt;  -- Иконка
-    &lt;link rel="stylesheet" type="text/css" href="CSS/style.css"&gt; -- Подключение CSS-стилей
+    &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt; -- Подключение CSS-стилей
     &lt;/head&gt;
 &lt;body&gt;
 &lt;header class="page-header"&gt;Хедер&lt;/header&gt;
@@ -497,20 +497,20 @@ width - ширина области прокрутки.
 							<Legend>Ввод личных данных</legend>
 							<p><label>Введите логин (16 символов макс.): </label> <input type="text" name="login" size="30" maxlength="16" placeholder="Введите имя" required></label></p>
 							<p><label>Введите пароль (20 символов макс.): </label> <input type="password" name="password" size="30" maxlength="20" placeholder="Введите пароль" autocomplete="off" required></label></p>
-							<p><input type="submit" value="ВОЙТИ"></p> <!--Кнопка ВОЙТИ-->							
+							<p><input type="submit" value="ВОЙТИ"></p> <!--Кнопка ВОЙТИ-->
 						</fieldset><br>
-					<label for="date">Дата</label> 
+					<label for="date">Дата</label>
                     <input type="date" name="date">
-                    <label for="day">Число</label>                    
-                    <input type="number" min="1" max="31" name="day">           
-                    <label for="month">Месяц</label>                    
-                    <input type="month" name="month"><br><br>     
+                    <label for="day">Число</label>
+                    <input type="number" min="1" max="31" name="day">
+                    <label for="month">Месяц</label>
+                    <input type="month" name="month"><br><br>
                     <label for="dayscount">Количество дней</label>
                     <output name="daysoutput"></output><br>
-                    1 <input type="range" id="dayscount" name="dayscount" min="1" max="14" step="1"> 14  <br><br> 
+                    1 <input type="range" id="dayscount" name="dayscount" min="1" max="14" step="1"> 14  <br><br>
                    	<label for="food">Любимая еда</label>
                       <select id="food" name="food" multiple>
-                          <optgroup label="Вкуснятина">	
+                          <optgroup label="Вкуснятина">
                             <option value="meat">Мясо</option>
                             <option value="fish">Рыба</option>
                             <option value="chi">Курочка</option>
@@ -532,14 +532,14 @@ width - ширина области прокрутки.
 	                        <option value="Мясо">
 	                        <option value="Рыба">
 	                        <option value="Курочка">
-	                    	</datalist><br><br>		
+	                    	</datalist><br><br>
 	                <label for="amount">Количество</label>
-                    <input type="number" min="5" max="50" step="5" id="amount" name="amount" ><br><br>	
-                    <label for="search">Поиск</label>		
+                    <input type="number" min="5" max="50" step="5" id="amount" name="amount" ><br><br>
+                    <label for="search">Поиск</label>
                     <input type="search" name="search"><br><br>
                     <p><span class="teg">pattern</span> - указывает регулярное выражение, согласно которому требуется вводить и проверять данные в поле формы. Если присутствует атрибут pattern, то форма не будет отправляться, пока поле не будет заполнено правильно.</p> <!--Добавь подбробное описание атрибута-->
-                    <p class="example"><label for="passport">Номер паспорта</label>            
-                    <input type="text" name="passport" pattern="[0-9]{3}-[0-9]{5}" placeholder="Формат номера XXX-XXXXX" required></p> 
+                    <p class="example"><label for="passport">Номер паспорта</label>
+                    <input type="text" name="passport" pattern="[0-9]{3}-[0-9]{5}" placeholder="Формат номера XXX-XXXXX" required></p>
                     <label for="tel">Номер телефона</label>
                     <input type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Формат номера X-XXX-XXX" required><br><br>
                     <label for="email">Email</label>
@@ -548,7 +548,7 @@ width - ширина области прокрутки.
                     <input type="url" name="url" required>
 					<p>Доп.информация:</p>
 					<textarea name="dop" cols="30" rows="6">Текст...</textarea><br>
-					<label for="color">Цвет</label>                       
+					<label for="color">Цвет</label>
                     <input type="color" name="color">
 					<p><input type="reset" name="reset" value="Очистить"> <input type="submit" name="submit" value="Отправить"> <input type="button" value="Просто кнопка" name="button"</p>
 					<p><input type="image" src="img/otpravit.png" name="imagebutton" alt="Отправить"></p>
@@ -559,9 +559,9 @@ width - ширина области прокрутки.
 					<p><span class="teg">disabled</span> - не дает пользователю изменять поле (вводить новый текст, модифицировать существующий). Нельзя поставить фокус в это поле, введенное значение нельзя выделять и копировать. Данные из этого поля НЕ отправляются на сервер.</p>
 					<p class="example"><label for="url">Личный сайт</label>
                     <input type="url" id="url" name="url" value="http://ya.ru" disabled></p>
-                    <p><span class="teg">autocomplete</span> - атрибут помогает заполнять поля форм текстом, который был введён в них ранее. Значения on | off</p>  
+                    <p><span class="teg">autocomplete</span> - атрибут помогает заполнять поля форм текстом, который был введён в них ранее. Значения on | off</p>
                     <p><span class="teg">tabindex</span> - атрибут устанавливает порядок получения фокуса при переходе между элементами с помощью клавиши Tab. Переход происходит от меньшего значения к большему, например от 1 к 2, затем к 3 и так далее. При этом строгая последовательность не важна, допускается пропускать какие-то числа и начинать с любой цифры. Если значения tabindex у элементов совпадают, тогда учитывается их порядок появления в коде. Заблокированные элементы (у которых установлен атрибут disabled) не участвуют в переходе и фокус не получают.</p>
-                    <p class="example">tabindex="<число>"</p>                       
+                    <p class="example">tabindex="<число>"</p>
 				</form>
 			</fieldset><br>
 			<fieldset>
