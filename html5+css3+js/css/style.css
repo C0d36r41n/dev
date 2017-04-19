@@ -10,19 +10,9 @@ background-image: url(./Img/pattern.png); /*Фоновый рисунок*/
   /*background-position:right bottom; - расположение фонового изображения.% | left | right | top | bottom | px*/
 }
 
-
-
-
-
-.main-menu {
-
-margin-left: auto;
-margin-right: auto;
-}
-
-
-
 .main-header ul {
+  margin: 0;
+  padding: 0;
  list-style: none; /*убираем маркеры*/
  }
 
@@ -63,8 +53,6 @@ margin-right: auto;
     display: block;
 }
 
-
-
 .content { /*Класс*/
   float: right; /*ВЫРАВНИВАНИЕ ПО ПРАВОЙ СТОРОНЕ*/
   width: 80%;
@@ -76,10 +64,7 @@ margin-right: auto;
 
 
 
-
-
-
-.teg {
+.tag {
   color: #DC143C;
   font-weight:bold;
 }
