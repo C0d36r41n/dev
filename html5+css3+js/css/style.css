@@ -1,37 +1,38 @@
 body {
   /*font: 14px Tahoma
   color: #00065B;*/
-  width: 1200px; /*Ширина сайт*/
-  margin: 0 auto; /*отцентровка*/
-  padding: 10px; /*Отступ от внутренних границ рамки*/
-  background-color:#f6f6f6; /*Цвет фона страницы*/
-  background-image: url(./Img/pattern.png); /*Фоновый рисунок*/
+width: 1200px; /*Ширина сайт*/
+margin: 0 auto; /*отцентровка*/
+padding: 10px; /*Отступ от внутренних границ рамки*/
+background-color:#f6f6f6; /*Цвет фона страницы*/
+background-image: url(./Img/pattern.png); /*Фоновый рисунок*/
   /*background-repeat:repeat; - фоновое изображение повторяется.очень полезное свойство. ЮЗАЙ ПОСТОЯННО. repeat | repeat-x | repeat-y | no-repeat */
   /*background-position:right bottom; - расположение фонового изображения.% | left | right | top | bottom | px*/
 }
 
-.content { /*Класс*/
-  float: right; /*ВЫРАВНИВАНИЕ ПО ПРАВОЙ СТОРОНЕ*/
-  width: 80%;
-}
+
+
+
 
 .main-menu {
-padding-left: 600px;
-list-style: none;
+
+margin-left: auto;
+margin-right: auto;
 }
 
-.main-menu ul {
- list-style: none; /*убираем маркеры*/
 
+
+.main-header ul {
+ list-style: none; /*убираем маркеры*/
  }
 
-  .main-menu li { /*Горизонтальное меню*/
+  .main-header li { /*Горизонтальное меню*/
     display: inline-block; /* делаем элементы списка строчными*/
     margin-right: 0px; /*отступ между элементами*/
     white-space: nowrap; /*запрет переноса строки внутри пунктов меню. ДЕЛАЕТ ВЫПАДАЮЩЕЕ МЕНЮ ГОРИЗОНТАЛЬНЫМ*/
 }
 
-.main-menu a {
+.main-header a {
     display: block;
     margin-left: -1px; /*убирает двойную рамку между соседними элементами*/
     padding: 15px 15px;
@@ -40,16 +41,16 @@ list-style: none;
     border-left: 1px solid #e5e5e5;
 }
 
-.main-menu a:hover {
+.main-header a:hover {
     background:  #cc3333;
     color: white;
 }
 
-.main-menu > li {
+.main-header > li {
     position: relative;
 }
 
-.main-menu .sub-menu { /* Подменю */
+.main-header .sub-menu { /* Подменю */
     position: absolute;
     margin: 0;
     padding:0;
@@ -58,9 +59,25 @@ list-style: none;
     display: none;
 }
 
-.main-menu > li:hover .sub-menu {
+.main-header > li:hover .sub-menu {
     display: block;
 }
+
+
+
+.content { /*Класс*/
+  float: right; /*ВЫРАВНИВАНИЕ ПО ПРАВОЙ СТОРОНЕ*/
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
 
 .teg {
   color: #DC143C;
@@ -99,6 +116,8 @@ display: block;
  padding: 10px 15px;
  line-height: 1,2; /*межстрочный интервал*/
 }
+
+
 
 p, h4, #myList {
   color: #404040; /*ЦВЕТ ТЕКСТА*/
@@ -449,6 +468,10 @@ display: inline-block;
     margin-top: 5px;
     font-size: 12px;
     color: #bdc3c7;
+}
+
+.page-footer{
+clear: both;
 }
 
 .comment-reply { /*Кнопка ОТВЕТ НА КОМЕНТАРИЙ*/
@@ -851,4 +874,9 @@ input[type="submit"] {
 
 /* transition
 Универсальное свойство, которое позволяет одновременно задать значения transition-property, transition-duration, transition-timing-function и transition-delay. Устанавливает эффект перехода между двумя состояниями элемента, они могут быть определены с помощью псевдокласса :hover или :active, а также динамически через JavaScript.
+ */
+
+
+ /*
+margin: o auto; - отцентровка
  */
