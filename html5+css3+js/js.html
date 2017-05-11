@@ -1,180 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-		<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
-		<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
-		<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
-		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
-		<link rel="stylesheet" type="text/css" href="css/style.css"> <!--Подключение CSS-->
+ 	<meta charset="UTF-8">
+ 	<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
+	<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
+	<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
+	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"> <!--Подключение CSS-->
 </head>
 <body>
+	<p><span class="definition">JavaScript</span> - язык программирования сценариев (script) со слабой типизацией и динамическим приведением типов.</p>
+	<hr>
+	<p>В JavaScript одинарные и двойные кавычки равноправны. Можно использовать или те или другие.</p>
+	<hr>
+	<p class="example">
+		&lt;script&gt;
+		<br>// Код скрипта находится внутри тега скрипт
+		<br>&lt;/script&gt;
+	</p>
+	<hr>
+	<p>Внешние скрипты тоже подключаются на страницу с помощью тега &lt;script&gt;. Для этого, тегу надо указать атрибут src. Код, расположенный внутри тега script, с атрибутом src, никогда не выполняется.</p>
+	<p class="example">
+		&lt;script src="js/scropt.js"&gt;
+		alert ('Это сообщение никогда не будет показано.');
+		&lt;/script&gt;
+	</p>
+	<hr>
+	<p>Скрипты выполняются по мере появления в коле страницы</p>
+	<p class="example">
+		&lt;script&gt;
+		<br>alert('Первое сообщение');
+		<br>&lt;/script&gt;
+		<br>&lt;script&gt;
+		<br>alert('Второе сообщение');
+		<br>&lt;/script&gt;
+	</p>
+	<hr>
+	<p>Переменные обозначаются с помошью var</p>
+	<p class="example">
+		var username = prompt {'What is your name?'}
+		document.write {'Hello , ' + username}
+	</p>
+	<hr>
+	<p>&& - логическое и<br>|| - логическое или<br>!true; - false</p>
+	<hr>
+	<p><span class="definition">Async</span> - При наличии атрибута async браузер при возможности запускает скрипт асинхронно. Это означает, что указанный в атрибуте src файл будет выполняться без ожидания загрузки и отображения веб-страницы. В то же время и страница не ожидает результата выполнения скрипта, а продолжает загружаться как обычно.</p>
+	<p class="example">&lt;script async src="js/script.js"&gt;...&lt;/script&gt;</p>
+	<p><span class="definition">Defer</span> - Атрибут defer откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена полностью. Работает только при наличии атрибута src.</p>
+	<p class="example">&lt;script src="js/script.js" defer&gt;...&lt;/script&gt;</p>
+	<p>Если задано сразу два атрибута — async и defer, то атрибут async игнорируется.</p>
+	<hr>
+	<p>В &lt;head&gt; принято подключать скрипты с внешних ресурсов, потому что они могут можифицирвоать код страницы через document.write, который позволяет модицицировать содержимое по мере загрузки.</p>
+	<p>В конце &lt;body&gt; лучше добавлять локальные скрипты, которы работают с разметкой, чтобы на момент выполнения скрипта, нужная разметка существовала.</p>
+	<p class="example">
+		&lt;body&gt;
+		<br>&lt;div id="element-width-id"&gt;&lt;/div&gt;
+		<br>&lt;script&gt;
+		document/getElementById('element-with-id');
+		<br>&lt;/script&gt;
+		<br>&lt;/body&gt;
+	</p>
+	<hr>
+	<fieldset>
+	<Legend id=""><h2> ТИПЫ ДАННЫХ </h2></legend>
+		<ul>
+		<h3>Примитивные / Простые</h3>
+			<li>Число «number»</li>
+				<p class="example">var n = 123;<br>n = 12.345;</p>
+				<p>Единый тип число используется как для целых (Integer), так и для дробных чисел (Float (floating point numbers)). Существуют специальные числовые значения Infinity (бесконечность) и NaN (ошибка вычислений). Например, бесконечность Infinity получается при делении на ноль:</p>
+				<p class="example">alert( 1 / 0 ); // Infinity</p>
+				<p>Ошибка вычислений NaN будет результатом некорректной математической операции, например:</p>
+				<p class="example">alert( "нечисло" * 2 ); // NaN, ошибка</p>
+				<p>Эти значения формально принадлежат типу «число», хотя, конечно, числами в их обычном понимании не являются.</p>
+			<li>Строка «string»</li>
+				<p class="example">var str = "Мама мыла раму";<br>str = 'Одинарные кавычки тоже подойдут';</p>
+			<li>Булевый (логический) тип «boolean»</li>
+				<p>У него всего два значения: true (истина) и false (ложь). Как правило, такой тип используется для хранения значения типа да/нет, например:</p>
+				<p class="example">var checked = true; // поле формы помечено галочкой<br>checked = false;    // поле формы не содержит галочки</p>
+			<li>Специальное значение «null»</li>
+				<p>Значение null не относится ни к одному из типов выше, а образует свой отдельный тип, состоящий из единственного значения null:</p>
+				<p class="example">var age = null;</p>
+				<p>В JavaScript null не является «ссылкой на несуществующий объект» или «нулевым указателем», как в некоторых других языках. Это просто специальное значение, которое имеет смысл «ничего» или «значение неизвестно».В частности, код выше говорит о том, что возраст age неизвестен.</p>
+			<li>Специальное значение «undefined»</li>
+				<p>Значение undefined, как и null, образует свой собственный тип, состоящий из одного этого значения. Оно имеет смысл «значение не присвоено». Если переменная объявлена, но в неё ничего не записано, то её значение как раз и есть undefined:</p>
+				<p class="example">var x;<br>alert( x ); // выведет "undefined"</p>
+				<p>Можно присвоить undefined и в явном виде, хотя это делается редко:</p>
+				<p class="example">var x = 123;<br>x = undefined;<br><br>alert( x ); // "undefined"</p>
+				<p>В явном виде undefined обычно не присваивают, так как это противоречит его смыслу. Для записи в переменную «пустого» или «неизвестного» значения используется null.</p>
+		</ul>
+		<ul>
+		<h3>Сложные</h3>
+			<li>Объекты «object»</li>
+				<p>Он используется для коллекций данных и для объявления более сложных сущностей.<br>Объявляются объекты при помощи фигурных скобок {...}, например:</p>
+				<p class="example">var user = { name: "Вася" };</p>
+			<li>Оператор typeof</li>
+				<p>Оператор typeof возвращает тип аргумента.<br>У него есть два синтаксиса: со скобками и без:</p>
+				<p>1. Синтаксис оператора: typeof x.<br>2. Синтаксис функции: typeof(x).</p>
+				<p>Работают они одинаково, но первый синтаксис короче.<br>Результатом typeof является строка, содержащая тип:</p>
+				<p class="example">typeof undefined // "undefined"<br>typeof 0 // "number"<br>typeof true // "boolean"<br>typeof "foo" // "string"<br>typeof {} // "object"<br>typeof null // "object"  (1)<br>typeof function(){} // "function"  (2)</p>
+				<p>В последних двух строках typeof ведет себя по-особому.</p>
+				<p>1.Результат typeof null == "object" – это официально признанная ошибка в языке, которая сохраняется для совместимости. На самом деле null – это не объект, а отдельный тип данных.<br>2.Функции мы пройдём чуть позже. Пока лишь заметим, что функции не являются отдельным базовым типом в JavaScript, а подвидом объектов. Но typeof выделяет функции отдельно, возвращая для них "function". На практике это весьма удобно, так как позволяет легко определить функцию.</p>
+		</ul>
+	</fieldset>
 
-JavaScript — язык программирования сценариев (script) со слабой типизацией и динамическим приведением типов.
+			<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
+			<p class="example">//Посчитать сумму сторон<br>var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>var polygonPerimeter = 0;<br>for (var i = 0; i < pilygonSides.length; i++) {<br>
+  			polygonPerimetr += polygonSides[i];<br>}<br>polygonPerimetr;</p>
+  			<p class="example">'10' + 2;<br>"102"</p>
+  			<p class="example">parseInt('10') + 2;<br>12</p>
+  			<p class="example">// С указанием системы счисления<br>parseInt('10', 10 ) + 2;<br>12</p>
+  			<p class="example">// Для дробных чисел<br>parseFloat('10.2') + 2;<br>12</p>
+  			<p class="example">var time = 3;<br>var speedOfFirst = 12;<br>var speedOfSecond = 14;<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>totalDistance;</p>
+  			<p class="example">ФУНКЦИИ<br>functionName(arg:type):type<br><br>function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>return totalDistance;<br>}</p>
+  			<p class="example">НЕ ЛИНЕЙНЫЙ АЛГОРИТМ<br><br>function buyABread(number) {<br>return number;<br>}<br>var eggsAreThere = true;<br>if (eggsAreThere) {<br>buyABread(10);<br>}<br>else {<br>  buyABread(1);<br>}</p>
+  			<p class="example">ЦИКЛИЧЕСКИЙ АЛГОРИТМ<br><br>Рекурсия<br><br>var orangesLeft = 3;<br>function peelNextOrange() {<br>  orangesLeft -=1;<br>if (orangesLeft > 0) {<br>  peelNextOrange();<br>orangesLeft;</p>
+  			<p class="example">Цикл<br><br>var orangesLeft = 3;<br>while (orangesLeft > 0) {<br>orangesLeft -= 1;<br>}<br><br>peelOranges();<br>orangesLeft;</p>
+  			<p class="example">var i = 0;<br>while (i  < 10) {<br>console.log(i);<br>i++;<br>}</p>
+  			<p class="example">var name = prompt ("Имя?");<br>  console.log ('Ваше имя ' + name);</p>
+  			<p class="example">var firstNum = 12;<br>var secondNum = 24;<br>document.write ("Результат: ", + firstNum + secondNum);</p>
+  			<p class="example">//Сложение<br><br>var firstNum = 12;<br>firstNum +=52;<br>document.write (firstNum);</p>
+  			<p class="example">// +1 к переменной<br><br>var firstNum = 12;<br>firstNum++;<br>document.write (firstNum);</p>
+  			<p class="example">// МАССИВЫ<br><br>var colors = ["Red", "Green", "Blue"];<br>document.write (colors[0]);</p>
+  			<p class="example">//Циклы<br><br>// i++ - увеличение на 1, i-- - уменьшение на 1<br><br>for (var i = 0; i <=10; i++);<br>console.log(i);<br><br>for (var i = 100; i > 10; i);<br>console.log(i);<br><br>for (var i = 100; i >= 10; i -= 10);<br>console.log(i);<br><br>var i = 0;<br>while (i < 10) {<br>  console.log(i);<br>  i++;<br>}<br><br>var i = 20;<br>do {<br>console.log(i);<br>} while (i > 10);<br><br>var colors = new Array ("Red", "Green", "Blue");<br>for (var i = 0; i < colors.length; i++);<br>  console.log(colors [i]);</p>
+  			<p class="example">// Операторы условий<br><br>var num_1 = 23;<br>var num_2 = 32;<br>if (num_1 == num_2) {<br>  console.log ("Переменные равны");<br>} else if (num_1 > num_2) {<br>  console.log ("num_1 >");<br>} else {<br>console.log ("num_2 >");<br>}<br><br>var bool = true;<br>if (bool) { //  =  if (bool = true); if (!bool)  =  if (bool = false)<br>  console.log (bool + " is true");<br>}<br><br>// switch case<br>var res = 3;<br>switch (res) {<br>  case 1:<br>        alert ("res = 1");<br>  break;<br>    case 2:<br>        alert ("res = 2");<br>  break;<br>      case 3:<br>        alert ("res = 3");<br>  break;<br>  default;<br>        alert ("res is unknown");<br>}</p>
+  			<p class="example">// Функции<br><br>function write (word) {<br>  document.write (word);<br>}<br>write ("Hello");<br>write ("&lt;br&gt;");<br>write ("World");<br><br>function summ (a, b) {<br>  return a + b;<br>}<br>document.write (summ (23, 34));</p>
+  			<p class="example">//Создание объекта<br><br>var person = {<br>  firstName: 'Ivan',<br>age: 45,<br>children: ['Liza', 'Katya'],<br>adress: {<br>  street: '12, Baiker st.',<br>city: 'Boston',<br>state: 'MA'<br>}<br>}<br>console.log (person);                         // (person.firstName) | (person.children[0]) | (person.adress.city)<br><br>var apple = nem Object ();<br>apple.color = 'green';<br>apple.shape = 'round';<br>apple.describe = function () {<br>  return 'An apple is ' + this.color;<br>}<br>console.log (apple.describe ()); | (apple.color)</p>
 
-Типы данных:
-1. Примитивные
-1.1 Числа -
-Есть 2 типа чисел:
-Integer - целые сисла
-Float (floating point numbers) - дробные числа
-
-Специальные значения:
-Infinity - бесконечность
-1 / 0;
-
-NaN (not a number) - не число
-'Какой-то текст' / 2;
-
-1.2 Строки (текст) - String (Строка)
-
-1.3 Логические (булевы значения)
-- Служебные (null, undefined)
-undefined - тип данных, который используется для объявленных переменных и свойств, у которых пока нет значения.
-
-2 > 2; //Больше  false
-2 >= 2; //Больше или равен  true
-2 < 2; //Меньше   false
-2 <=2; //Меньше или равен    true
-3 == '3'; //Сравнение с приведением типа   true
-3 === '3'; //Строгое сравнение    false
-3 != '3'; //Не равно    false
-3 ! == '3'; //Не равно с приведением типов    true
-
-2. Сложные
-
-Массив - сложный тип данных, позволяющий хранить несколько связанных значений вместе. Доступ к элементу массива производится по ключу.
-
-var polygonSides = (10, 20, 30, 40, 30, 20, 10);
-polygonSides [0] // 0 - индекс массива, в данном случае - 10.
+</body>
+</html>
 
 
+<html>
+<body>
+<p id="text">Какой-то текст</p>
+<button onmouseout="changeColor('blue');">Синий</button>
+<button onclick="changeColor('red');">Красный</button>
+<br>
+<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+Имя: <input type="text" name="fname">
+<input type="submit" name="Submit">
+</form>
 
-//Посчитать сумму сторон
-var polygonSides = (10, 20, 30, 40, 30, 20, 10);
-var polygonPerimeter = 0;
-for (var i = 0; i < pilygonSides.length; i++) {
-  polygonPerimetr += polygonSides[i];
+
+<script>
+function validateForm () {
+var element = document.forms["myForm"] ["fname"].value;
+if (element =="") {
+  alert ("Имя должно быть заполнено");
+  return false;
 }
-polygonPerimetr;
-
------------------------
-
-
-
-
-'10' + 2;
-"102"
-
-parseInt('10') + 2;
-12
-
-С указанием системы счисления
-parseInt('10', 10 ) + 2;
-12
-
-Для дробных чисел
-parseFloat('10.2') + 2;
-12
-
-typeof
-
-async
-
-Defer
-
-В <head> принято подключать скрипты с внешних ресурсов, потому что они могут модифицировать код страницы через document.write, который позволяет модифицировать содержимое по мере загрузки.
-
-&& - логическое и
-|| - логическое или
-!true; - false
-
-Переменные обозначаются с помошью var
-var username = prompt {'What is your name?'}
-document.write {'Hello , ' + username}
-
--------------------------------------------------------------------------------------
-
-
-var time = 3;
-var speedOfFirst = 12;
-var speedOfSecond = 14;
-var distanceOfFirst = speedOfFirst * time;
-var distanceOfSecond = speedOfSecond * time;
-var totalDistance = distanceOfFirst + distanceOfSecond;
-totalDistance;
-
--------------------------------------------------------------------------------------
-ФУНКЦИИ
-functionName(arg:type):type
-
-function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {
-var distanceOfFirst = speedOfFirst * time;
-var distanceOfSecond = speedOfSecond * time;
-var totalDistance = distanceOfFirst + distanceOfSecond;
-return totalDistance;
 }
 
--------------------------------------------------------------------------------------
+  function changeColor (newColor) {
+    var element = document.getElementById("text");
+    element.style.color = newColor;
+  }
 
-НЕ ЛИНЕЙНЫЙ АЛГОРИТМ
-
-function buyABread(number) {
-return number;
-}
-var eggsAreThere = true;
-if (eggsAreThere) {
-  buyABread(10);
-}
-else {
-  buyABread(1);
-}
--------------------------------------------------------------------------------------
-ЦИКЛИЧЕСКИЙ АЛГОРИТМ
--------------------------------------------------------------------------------------
-Рекурсия
-var orangesLeft = 3;
-function peelNextOrange() {
-  orangesLeft -=1;
-if (orangesLeft > 0) {
-  peelNextOrange();
-    }
-}
-peelNextOrange();
-orangesLeft;
--------------------------------------------------------------------------------------
-Цикл
-var orangesLeft = 3;
-while (orangesLeft > 0) {
-orangesLeft -= 1;
-    }
-}
-
-peelOranges();
-orangesLeft;
--------------------------------------------------------------------------------------
-for (var i = 0; =10; i++);
-console.log(i);
--------------------------------------------------------------------------------------
-var i = 0;
-while (i  < 10) {
-console.log(i);
-i++;
-}
--------------------------------------------------------------------------------------
-
-
-
-
--------------------------------------------------------------------------------------
-  var name = prompt ("Имя?");
-  console.log ('Ваше имя ' + name);
--------------------------------------------------------------------------------------
-
-
-
-
-
+</script>
 
 
 
