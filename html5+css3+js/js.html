@@ -1,31 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
-    <meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
-    <meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
-    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
-    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--Подключение CSS-->
-  </head>
-  <body>
-    <header class="main-header"></header>
-      <div class="container">
-      <nav class="main-navigator">
-        <ul>
-            <li><a href="">HTML</a></li>
-            <li><a href="">CSS</a></li>
-            <li><a href="js.html">JS</a>
-              <ul class="sub-menu">
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-              </ul>
-            </li>
-                      <li><a href="">GIT</a></li>
-      </nav>
-      <div class="login">ВХОД</div>
-      </div>
-  </header>
-  </body>
+<head>
+	<meta charset="UTF-8">
+		<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
+		<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
+		<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
+		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"> <!--Подключение CSS-->
+</head>
+<body>
+
+JavaScript — язык программирования сценариев (script) со слабой типизацией и динамическим приведением типов.
+
+Типы данных:
+1. Примитивные
+1.1 Числа -
+Есть 2 типа чисел:
+Integer - целые сисла
+Float (floating point numbers) - дробные числа
+
+Специальные значения:
+Infinity - бесконечность
+1 / 0;
+
+NaN (not a number) - не число
+'Какой-то текст' / 2;
+
+1.2 Строки (текст) - String (Строка)
+
+1.3 Логические (булевы значения)
+- Служебные (null, undefined)
+undefined - тип данных, который используется для объявленных переменных и свойств, у которых пока нет значения.
+
+2 > 2; //Больше  false
+2 >= 2; //Больше или равен  true
+2 < 2; //Меньше   false
+2 <=2; //Меньше или равен    true
+3 == '3'; //Сравнение с приведением типа   true
+3 === '3'; //Строгое сравнение    false
+3 != '3'; //Не равно    false
+3 ! == '3'; //Не равно с приведением типов    true
+
+2. Сложные
+
+Массив - сложный тип данных, позволяющий хранить несколько связанных значений вместе. Доступ к элементу массива производится по ключу.
+
+var polygonSides = (10, 20, 30, 40, 30, 20, 10);
+polygonSides [0] // 0 - индекс массива, в данном случае - 10.
+
+
+
+//Посчитать сумму сторон
+var polygonSides = (10, 20, 30, 40, 30, 20, 10);
+var polygonPerimeter = 0;
+for (var i = 0; i < pilygonSides.length; i++) {
+  polygonPerimetr += polygonSides[i];
+}
+polygonPerimetr;
+
+-----------------------
+
+
+
+
+'10' + 2;
+"102"
+
+parseInt('10') + 2;
+12
+
+С указанием системы счисления
+parseInt('10', 10 ) + 2;
+12
+
+Для дробных чисел
+parseFloat('10.2') + 2;
+12
+
+typeof
+
+async
+
+Defer
+
+В <head> принято подключать скрипты с внешних ресурсов, потому что они могут модифицировать код страницы через document.write, который позволяет модифицировать содержимое по мере загрузки.
+
+&& - логическое и
+|| - логическое или
+!true; - false
+
+Переменные обозначаются с помошью var
+var username = prompt {'What is your name?'}
+document.write {'Hello , ' + username}
+
+-------------------------------------------------------------------------------------
+
+
+var time = 3;
+var speedOfFirst = 12;
+var speedOfSecond = 14;
+var distanceOfFirst = speedOfFirst * time;
+var distanceOfSecond = speedOfSecond * time;
+var totalDistance = distanceOfFirst + distanceOfSecond;
+totalDistance;
+
+-------------------------------------------------------------------------------------
+ФУНКЦИИ
+functionName(arg:type):type
+
+function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {
+var distanceOfFirst = speedOfFirst * time;
+var distanceOfSecond = speedOfSecond * time;
+var totalDistance = distanceOfFirst + distanceOfSecond;
+return totalDistance;
+}
+
+-------------------------------------------------------------------------------------
+
+НЕ ЛИНЕЙНЫЙ АЛГОРИТМ
+
+function buyABread(number) {
+return number;
+}
+var eggsAreThere = true;
+if (eggsAreThere) {
+  buyABread(10);
+}
+else {
+  buyABread(1);
+}
+-------------------------------------------------------------------------------------
+ЦИКЛИЧЕСКИЙ АЛГОРИТМ
+-------------------------------------------------------------------------------------
+Рекурсия
+var orangesLeft = 3;
+function peelNextOrange() {
+  orangesLeft -=1;
+if (orangesLeft > 0) {
+  peelNextOrange();
+    }
+}
+peelNextOrange();
+orangesLeft;
+-------------------------------------------------------------------------------------
+Цикл
+var orangesLeft = 3;
+while (orangesLeft > 0) {
+orangesLeft -= 1;
+    }
+}
+
+peelOranges();
+orangesLeft;
+-------------------------------------------------------------------------------------
+for (var i = 0; =10; i++);
+console.log(i);
+-------------------------------------------------------------------------------------
+var i = 0;
+while (i  < 10) {
+console.log(i);
+i++;
+}
+-------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------
+  var name = prompt ("Имя?");
+  console.log ('Ваше имя ' + name);
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+<script async src="/assets/course2/final.js"></script> <!--Подключение скрипта-->
+</body>
 </html>

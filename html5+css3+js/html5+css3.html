@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
-		<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
-		<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
-		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
-		<link rel="stylesheet" type="text/css" href="CSS/style.css"> <!--Подключение CSS-->
-	</head>
-	<body>
-		<header class="main-header">
-                <ul class="main-menu">
-	                <li><a href="">HTML</a></li>
-	                <li><a href="">CSS</a></li>
-	                <li><a href="">JS</a>
-	                	<ul class="sub-menu">
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-	                	</ul>
-	               </li>
-                </ul>
-		</header>
-		<main>
+<html lang="ru"><head>
+	<meta charset="UTF-8">
+	<title>ЗАГОЛОВОК ВО ВКЛАДКЕ</title>
+	<meta name="keywords" content="HTML, элементы, списки, таблицы, ссылки"> <!--Ключевые слова на странице для поисковиков-->
+	<meta name="description" content="Работа с HTML"> <!--Краткое описание страницы для поисковиков-->
+	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"> <!-- ИКОНКА -->
+	<link rel="stylesheet" type="text/css" href="CSS/style.css"> <!--Подключение CSS-->
+</head>
+<body>
+	<header class="main-header">
+	<ul class="main-menu">
+		<li><a href="">HTML</a></li>
+		<li><a href="">CSS</a></li>
+		<li><a href="">JS</a>
+	         	<ul class="sub-menu">
+			<li><a href="">1</a></li>
+			<li><a href="">2</a></li>
+			<li><a href="">3</a></li>
+	          	</ul>
+	       </li>
+      </ul>
+	</header>
+	<main>
 		<div class="menu">
 			<h3 id="sections">ОГЛАВЛЕНИЕ</h3>
 			<ul>
@@ -634,25 +633,29 @@ width - ширина области прокрутки.
 				<p><span class="tag">.title a {...}</span> - тег внутри тега с классом</p>
 				<p><span class="tag">.title .bage {...}</span> - класс внутри тега с классом</p>
 			</fieldset><br>
-			<!--FOOTER-->
-			<div class="contacts">
-				    <div class="title">Наш адрес</div>
+<!--FOOTER-->
+		<div class="contacts">
+			    <div class="title">Наш адрес</div>
+			    <div class="item">
+				    <div class="icon icon-location"></div>
+				         Россия, Санкт-Петербург,<br>
+				         Невский пр., дом 1
+			   </div>
 				    <div class="item">
-					    <div class="icon icon-location"></div>
-					         Россия, Санкт-Петербург,<br>
-					         Невский пр., дом 1
-				   </div>
-					    <div class="item">
-					    <div class="icon icon-phone"></div>
-					         +7 (921) 555-33-22
-				   </div>
-			     <div class="item">
-				     <div class="icon icon-email"></div>
-				     <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-				</div>
-			</div><br>
-			</main>
-			<footer class="page-footer"></footer>
-	<script src="/assets/course2/final.js"></script> <!--Подключение скрипта-->
-	</body>
+				    <div class="icon icon-phone"></div>
+				         +7 (921) 555-33-22
+			   </div>
+		     <div class="item">
+			     <div class="icon icon-email"></div>
+			     <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+			</div>
+		</div><br>
+		</main>
+		<footer class="page-footer"></footer>
+<script async src="/assets/course2/final.js"></script> <!--Подключение скрипта-->
+<script>
+	var name = prompt ("Имя?");
+	console.log ('Ваше имя ' + name);
+</script>
+</body>
 </html>
