@@ -102,6 +102,15 @@
 				<p>1.Результат typeof null == "object" – это официально признанная ошибка в языке, которая сохраняется для совместимости. На самом деле null – это не объект, а отдельный тип данных.<br>2.Функции мы пройдём чуть позже. Пока лишь заметим, что функции не являются отдельным базовым типом в JavaScript, а подвидом объектов. Но typeof выделяет функции отдельно, возвращая для них "function". На практике это весьма удобно, так как позволяет легко определить функцию.</p>
 		</ul>
 	</fieldset>
+	<fieldset>
+	<Legend id=""><h2> Canvas </h2></legend>
+	<p><span class="definition">Canvas</span> создаёт область, в которой при помощи JavaScript можно рисовать разные объекты, выводить изображения, трансформировать их и менять свойства. При помощи элемента &lt;canvas&gt; можно создавать рисунки, анимацию, игры и др.Указывается в HTML-разметке.</p>
+	<p class="example">&lt;canvas id="&lt;идентификатор&gt;"&gt;<br>&lt;/canvas&gt;</p>
+
+
+
+
+	</fieldset>
 
 			<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
 			<p class="example">//Посчитать сумму сторон<br>var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>var polygonPerimeter = 0;<br>for (var i = 0; i < pilygonSides.length; i++) {<br>
@@ -111,7 +120,7 @@
   			<p class="example">// С указанием системы счисления<br>parseInt('10', 10 ) + 2;<br>12</p>
   			<p class="example">// Для дробных чисел<br>parseFloat('10.2') + 2;<br>12</p>
   			<p class="example">var time = 3;<br>var speedOfFirst = 12;<br>var speedOfSecond = 14;<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>totalDistance;</p>
-  			<p class="example">ФУНКЦИИ<br>functionName(arg:type):type<br><br>function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>return totalDistance;<br>}</p>
+  			<p class="example">ФУНКЦИИ<br>functionName(arg:type):type<br><br>function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>return totalDistance;<br>}<br>calculateTotalDistance(3, 10, 12); // document.body.innerHTML = calculateTotalDistance(3, 10, 12);</p>
   			<p class="example">НЕ ЛИНЕЙНЫЙ АЛГОРИТМ<br><br>function buyABread(number) {<br>return number;<br>}<br>var eggsAreThere = true;<br>if (eggsAreThere) {<br>buyABread(10);<br>}<br>else {<br>  buyABread(1);<br>}</p>
   			<p class="example">ЦИКЛИЧЕСКИЙ АЛГОРИТМ<br><br>Рекурсия<br><br>var orangesLeft = 3;<br>function peelNextOrange() {<br>  orangesLeft -=1;<br>if (orangesLeft > 0) {<br>  peelNextOrange();<br>orangesLeft;</p>
   			<p class="example">Цикл<br><br>var orangesLeft = 3;<br>while (orangesLeft > 0) {<br>orangesLeft -= 1;<br>}<br><br>peelOranges();<br>orangesLeft;</p>
@@ -125,9 +134,30 @@
   			<p class="example">// Операторы условий<br><br>var num_1 = 23;<br>var num_2 = 32;<br>if (num_1 == num_2) {<br>  console.log ("Переменные равны");<br>} else if (num_1 > num_2) {<br>  console.log ("num_1 >");<br>} else {<br>console.log ("num_2 >");<br>}<br><br>var bool = true;<br>if (bool) { //  =  if (bool = true); if (!bool)  =  if (bool = false)<br>  console.log (bool + " is true");<br>}<br><br>// switch case<br>var res = 3;<br>switch (res) {<br>  case 1:<br>        alert ("res = 1");<br>  break;<br>    case 2:<br>        alert ("res = 2");<br>  break;<br>      case 3:<br>        alert ("res = 3");<br>  break;<br>  default;<br>        alert ("res is unknown");<br>}</p>
   			<p class="example">// Функции<br><br>function write (word) {<br>  document.write (word);<br>}<br>write ("Hello");<br>write ("&lt;br&gt;");<br>write ("World");<br><br>function summ (a, b) {<br>  return a + b;<br>}<br>document.write (summ (23, 34));</p>
   			<p class="example">//Создание объекта<br><br>var person = {<br>  firstName: 'Ivan',<br>age: 45,<br>children: ['Liza', 'Katya'],<br>adress: {<br>  street: '12, Baiker st.',<br>city: 'Boston',<br>state: 'MA'<br>}<br>}<br>console.log (person);                         // (person.firstName) | (person.children[0]) | (person.adress.city)<br><br>var apple = nem Object ();<br>apple.color = 'green';<br>apple.shape = 'round';<br>apple.describe = function () {<br>  return 'An apple is ' + this.color;<br>}<br>console.log (apple.describe ()); | (apple.color)</p>
+        <hr>
+
 
 </body>
 </html>
+
+<p><span class="definition"></span></p>
+<p class="example"></p>
+&lt;script&gt;
+
+---------------------------------------------------------------------------------
+Объект
+
+
+var obj = { prop: 1};
+obj.prop; // первый способ вывода
+obj ['prop']; // второй способ вывода
+
+---------------------------------------------------------------------------------
+
+
+
+
+
 
 
 <html>
