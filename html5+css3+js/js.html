@@ -106,37 +106,141 @@
 	<Legend id=""><h2> Canvas </h2></legend>
 	<p><span class="definition">Canvas</span> создаёт область, в которой при помощи JavaScript можно рисовать разные объекты, выводить изображения, трансформировать их и менять свойства. При помощи элемента &lt;canvas&gt; можно создавать рисунки, анимацию, игры и др.Указывается в HTML-разметке.</p>
 	<p class="example">&lt;canvas id="&lt;идентификатор&gt;"&gt;<br>&lt;/canvas&gt;</p>
+	</fieldset>
+	<fieldset>
+		<Legend id=""><h2> Объекты </h2></legend>
+		<p>Объекты - ключевая сущность в JS. Большой объем работы с кодом в JS представляет собой манипуляции с объектами. Объект - сложный тип данных, представляющий собой набор пар "ключ - значение". Самый простой способ создать новый объект в JS - описать ключи и значения в фигурных скобках через запятую. Значение отделяется от ключа двоеточием.</p>
+		<p class="example">var myObject = {<br>firstProperty: 'value',<br>secondProperty:'second-value',<br>numericProperty: 42,<br>objectProperty: {<br>internalObkect: [1,2,3]<br>}<br>};</p>
+		<p>Доступ к отдельым свойствам объекта возможен двумя способами: через точку или через квадратные скобки</p>
+		<p class="example">var obj = { prop: 1 };<br>obj.prop;<br>obj ['prop'];</p>
+		<p>Нотацию с обращение через скобки удобно использовать в двух случаях: в случае, если название ключа нужно вычислить или для доступа к ключам с названием, содержащим запрещенные символы.</p>
+		<p class="example">var obj = {<br>prop1: 1,<br>prop2: 2,<br>prop3: 3,<br>'property name+impossibleTo access through-dot':true<br>};</p>
+		<p>Вычисление ключа</p>
+		<p class="example">for (var i = 1; i <= 3; i++) {<br>obj['prop' + i];<br>console.log('prop' + i)<br>}</p>
+		<p>Итератор по объектам: for....in<br>Для итерации по объектам существует специальный вид цикла for. Он перебирает каждый ключ объекта по очереди, вызывая оператор in.</p>
+		<p class="example">var myObject = {<br>someProp: 1,<br>anotherProp: 2<br>};<br><br>'someProp' in myObject;<br><br>for (var prop in myObject) {<br>prop;<br>myObject [prop];<br>}</p>
+		<p>В качестве значения в объект могут быть записаны функции.</p>
+		<p class="example">var obj = {<br>doSomething: function() {<br>console.log('something');<br>}<br>}<br><br>typeof obj.doSomething; //Функция тоже является значением (тип function), поэтому после ее объявления, к ней можно обращаться как к обычной переменной.<br>obj.doSomething(); //Вызов функции - запуск кода, записанного в ней - происходит при добавлении к названию функции круглых скобок.</p>
+		<p>Значения, которые хранятся в объектах принято называть свойствами объекта, а функции - методами.</p>
+		<p class="example">var table = { //Цвет и количество ножек для стола - свойства.<br>Color: 'black',<br>legsCount: 4,<br>// Перекраска стола - это метод, он управляет его свойствами.<br>paint: function(color) {<br>this.color = color;<br>// Ключевое слово this ссылается на сам объект.<br>}<br>};<br><br>table.color; // "Black"<br>table.paint('red');<br>table.color; // "red"</p>
+	</fieldset>
+	<fieldset>
+		<Legend id=""><h2> DOM-дерево </h2></legend>
+		<p><span class="definition">DOM</span> - объектная модель документа. Каждому тегу на странице в соответствие ставится свой объект. Свойства объекта являются атрибутами тега. Корневой элемент DOM-дерева - объект document. Доступ к дочерним элементам каждого объекта в DOM-дереве производится или через свойство childNodes или с помощью метода querySelector(selector: string):Element</p>
+		<p class="example">var logo = document.body.querySelector('.ha-header-logo img');<br>logo.src = 'https://htmlacademy.ru/static/img/404-keks-jpg';</p>
+		<h3>Основные виды узлов</h3>
+		<ul>
+			<li>Node - узел DOM-дерева</li>
+				<ul>
+				<li>Element - тег</li>
+				<li>CharacterData - узел с текстом внутри</li>
+					<ul>
+					<li>Text - Текстовое содержимое тегов</li>
+					<li>Comment - HTML-комментарии</li>
+					</ul>
+				<li>Document - корень страницы</li>
+				</ul>
+		</ul>
+		<h3>Коллекции</h3>
+		<ul>
+		<li>выглядят как массивы</li>
+		<li>итерируются как массивы</li>
+		<li>не являются массивами</li>
+		</ul>
+		<h4>Виды</h4>
+		<ul>
+		<li>NodeList - коллекции, содержащие все виды улов</li>
+		<li>HTMLCollection - коллекции, состоящие из Element</li>
+		</ul>
+		<h3>Встроенные в Document коллекции</h3>
+		<ul>
+		<li>All - все элементы в порядке их появления в разметке</li>
+		<li>forms - все формы на странице</li>
+		<li>images - все картинки</li>
+		<li>link - все ссылки</li>
+		<li>scripts - все скрипты</li>
+		<li>stylesheets - все стили </li>
+		</ul>
+		<h3>Методы поиска элементов</h3>
+		<ul>
+		<li>Node.childNodes // Дочерние узлы (Node)</li>
+		<li>Node.children // Дочерние элементы (HTMLElement)</li>
+		<li>Node.parentNode // Родительский узел</li>
+		<li>Node.parentElement // Родительский элемент</li>
+		<li>Node.nextSibling // Сосед справа</li>
+		<li>Node.prevSibling // Сосед слева</li>
+		</ul>
+		<h3>Методы поиска элементов</h3>
+		<ul>
+		<li>Поиск по ID</li>
+		<p class="example">Element.getElementById(id: string): Element</p>
+		<li>Поиск всех элементов с определенным классом</li>
+		<p class="example">Element.getElementsByClassName(className: string): NodeList</p>
+		<li>Поиск всех элементов с тегом</li>
+		<p class="example">Element.getElementsByTagName(tagName: string): NodeList</p>
+		<li>Поиск первого элемента, соответствующего селектору</li>
+		<p class="example">Element.querySelector(selector: string): Element</p>
+		<li>Поиск всех элементов, соответствующих селекторам</li>
+		<p class="example">Element.querySelectorAll(selector:string): NodeList</p>
+		</ul>
+		<h3>Формы. Валидация формы.</h3>
+		<ul>
+		<li>Проверка на правильность формата введенных данных.</li>
+		<li>Ограничение значений (напр. минимум и максимум для числа).</li>
+		<li>Реакция на изменение значений.</li>
+		<li>Запрет на отправку до тех пор пока форма не валидна.</li>
+		</ul>
+		<h4>Системная валидация</h4>
+		<p>Валидация с использованием встроенных атрибутов у элементов формы. Используются специальные типы полей ввода: number, date и т.д.</p>
+		<h4>Не системная валидация</h4>
+		<p>Системные атрибуты, если и используются, то ограниченно, как дополнительные инструменты. Реакция формы на неправильные данные реализуется вручную.</p>
+		<p class="example">// Валидация формы:<br>1. ограничения на минимальное/максимальное значение<br><br>// Форма и поля ввода<br>var formElement = document.forms['searchform'];<br><br>var guests = formElement['searchform-guests-number'];<br>var rooms = formElement['searchform-guests-rooms'];<br><br>// Минимальное количество гостей - 1, максимальное - 6<br>guests.min = 1;<br>guests.max=6;<br><br>// Минимальное и максимальное количество комнат зависит от числа гостей<br>var MAX_GUESTS_PER_ROOM = 3;<br><br>/**<br>* Функция, которая ограничивает минимальное и максимальное значение комнат в зависимости от числа гостей.<br>*@param {Element} roomsElement<br>*@param {number} guestsNumber<br>*/<br>function setMinAndMaxRooms(roomsElement,guestsNumber) {<br></p>
+
+
+		<h3></h3>
+		<ul>
+		<li></li>
+		<p class="example"></p>
+		<li></li>
+		<p class="example"></p>
+		<li></li>
+		<p class="example"></p>
+		<li></li>
+		<p class="example"></p>
+		<li></li>
+		<p class="example"></p>
+		</ul>
+
+
+
+
 
 
 
 
 	</fieldset>
-
-			<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
-			<p class="example">//Посчитать сумму сторон<br>var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>var polygonPerimeter = 0;<br>for (var i = 0; i < pilygonSides.length; i++) {<br>
-  			polygonPerimetr += polygonSides[i];<br>}<br>polygonPerimetr;</p>
-  			<p class="example">'10' + 2;<br>"102"</p>
-  			<p class="example">parseInt('10') + 2;<br>12</p>
-  			<p class="example">// С указанием системы счисления<br>parseInt('10', 10 ) + 2;<br>12</p>
-  			<p class="example">// Для дробных чисел<br>parseFloat('10.2') + 2;<br>12</p>
-  			<p class="example">var time = 3;<br>var speedOfFirst = 12;<br>var speedOfSecond = 14;<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>totalDistance;</p>
-  			<p class="example">ФУНКЦИИ<br>functionName(arg:type):type<br><br>function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>return totalDistance;<br>}<br>calculateTotalDistance(3, 10, 12); // document.body.innerHTML = calculateTotalDistance(3, 10, 12);</p>
-  			<p class="example">НЕ ЛИНЕЙНЫЙ АЛГОРИТМ<br><br>function buyABread(number) {<br>return number;<br>}<br>var eggsAreThere = true;<br>if (eggsAreThere) {<br>buyABread(10);<br>}<br>else {<br>  buyABread(1);<br>}</p>
-  			<p class="example">ЦИКЛИЧЕСКИЙ АЛГОРИТМ<br><br>Рекурсия<br><br>var orangesLeft = 3;<br>function peelNextOrange() {<br>  orangesLeft -=1;<br>if (orangesLeft > 0) {<br>  peelNextOrange();<br>orangesLeft;</p>
-  			<p class="example">Цикл<br><br>var orangesLeft = 3;<br>while (orangesLeft > 0) {<br>orangesLeft -= 1;<br>}<br><br>peelOranges();<br>orangesLeft;</p>
-  			<p class="example">var i = 0;<br>while (i  < 10) {<br>console.log(i);<br>i++;<br>}</p>
-  			<p class="example">var name = prompt ("Имя?");<br>  console.log ('Ваше имя ' + name);</p>
-  			<p class="example">var firstNum = 12;<br>var secondNum = 24;<br>document.write ("Результат: ", + firstNum + secondNum);</p>
-  			<p class="example">//Сложение<br><br>var firstNum = 12;<br>firstNum +=52;<br>document.write (firstNum);</p>
-  			<p class="example">// +1 к переменной<br><br>var firstNum = 12;<br>firstNum++;<br>document.write (firstNum);</p>
-  			<p class="example">// МАССИВЫ<br><br>var colors = ["Red", "Green", "Blue"];<br>document.write (colors[0]);</p>
-  			<p class="example">//Циклы<br><br>// i++ - увеличение на 1, i-- - уменьшение на 1<br><br>for (var i = 0; i <=10; i++);<br>console.log(i);<br><br>for (var i = 100; i > 10; i);<br>console.log(i);<br><br>for (var i = 100; i >= 10; i -= 10);<br>console.log(i);<br><br>var i = 0;<br>while (i < 10) {<br>  console.log(i);<br>  i++;<br>}<br><br>var i = 20;<br>do {<br>console.log(i);<br>} while (i > 10);<br><br>var colors = new Array ("Red", "Green", "Blue");<br>for (var i = 0; i < colors.length; i++);<br>  console.log(colors [i]);</p>
-  			<p class="example">// Операторы условий<br><br>var num_1 = 23;<br>var num_2 = 32;<br>if (num_1 == num_2) {<br>  console.log ("Переменные равны");<br>} else if (num_1 > num_2) {<br>  console.log ("num_1 >");<br>} else {<br>console.log ("num_2 >");<br>}<br><br>var bool = true;<br>if (bool) { //  =  if (bool = true); if (!bool)  =  if (bool = false)<br>  console.log (bool + " is true");<br>}<br><br>// switch case<br>var res = 3;<br>switch (res) {<br>  case 1:<br>        alert ("res = 1");<br>  break;<br>    case 2:<br>        alert ("res = 2");<br>  break;<br>      case 3:<br>        alert ("res = 3");<br>  break;<br>  default;<br>        alert ("res is unknown");<br>}</p>
-  			<p class="example">// Функции<br><br>function write (word) {<br>  document.write (word);<br>}<br>write ("Hello");<br>write ("&lt;br&gt;");<br>write ("World");<br><br>function summ (a, b) {<br>  return a + b;<br>}<br>document.write (summ (23, 34));</p>
-  			<p class="example">//Создание объекта<br><br>var person = {<br>  firstName: 'Ivan',<br>age: 45,<br>children: ['Liza', 'Katya'],<br>adress: {<br>  street: '12, Baiker st.',<br>city: 'Boston',<br>state: 'MA'<br>}<br>}<br>console.log (person);                         // (person.firstName) | (person.children[0]) | (person.adress.city)<br><br>var apple = nem Object ();<br>apple.color = 'green';<br>apple.shape = 'round';<br>apple.describe = function () {<br>  return 'An apple is ' + this.color;<br>}<br>console.log (apple.describe ()); | (apple.color)</p>
+		<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
+		<p class="example">//Посчитать сумму сторон<br>var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>var polygonPerimeter = 0;<br>for (var i = 0; i < pilygonSides.length; i++) {<br>polygonPerimetr += polygonSides[i];<br>}<br>polygonPerimetr;</p>
+  		<p class="example">'10' + 2;<br>"102"</p>
+  		<p class="example">parseInt('10') + 2;<br>12</p>
+  		<p class="example">// С указанием системы счисления<br>parseInt('10', 10 ) + 2;<br>12</p>
+  		<p class="example">// Для дробных чисел<br>parseFloat('10.2') + 2;<br>12</p>
+  		<p class="example">var time = 3;<br>var speedOfFirst = 12;<br>var speedOfSecond = 14;<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>totalDistance;</p>
+  		<p class="example">ФУНКЦИИ<br>functionName(arg:type):type<br><br>function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {<br>var distanceOfFirst = speedOfFirst * time;<br>var distanceOfSecond = speedOfSecond * time;<br>var totalDistance = distanceOfFirst + distanceOfSecond;<br>return totalDistance;<br>}<br>calculateTotalDistance(3, 10, 12); // document.body.innerHTML = calculateTotalDistance(3, 10, 12);</p>
+  		<p class="example">НЕ ЛИНЕЙНЫЙ АЛГОРИТМ<br><br>function buyABread(number) {<br>return number;<br>}<br>var eggsAreThere = true;<br>if (eggsAreThere) {<br>buyABread(10);<br>}<br>else {<br>  buyABread(1);<br>}</p>
+  		<p class="example">ЦИКЛИЧЕСКИЙ АЛГОРИТМ<br><br>Рекурсия<br><br>var orangesLeft = 3;<br>function peelNextOrange() {<br>  orangesLeft -=1;<br>if (orangesLeft > 0) {<br>  peelNextOrange();<br>orangesLeft;</p>
+  		<p class="example">Цикл<br><br>var orangesLeft = 3;<br>while (orangesLeft > 0) {<br>orangesLeft -= 1;<br>}<br><br>peelOranges();<br>orangesLeft;</p>
+  		<p class="example">var i = 0;<br>while (i  < 10) {<br>console.log(i);<br>i++;<br>}</p>
+  		<p class="example">var name = prompt ("Имя?");<br>  console.log ('Ваше имя ' + name);</p>
+  		<p class="example">var firstNum = 12;<br>var secondNum = 24;<br>document.write ("Результат: ", + firstNum + secondNum);</p>
+  		<p class="example">//Сложение<br><br>var firstNum = 12;<br>firstNum +=52;<br>document.write (firstNum);</p>
+  		<p class="example">// +1 к переменной<br><br>var firstNum = 12;<br>firstNum++;<br>document.write (firstNum);</p>
+  		<p class="example">// МАССИВЫ<br><br>var colors = ["Red", "Green", "Blue"];<br>document.write (colors[0]);</p>
+  		<p class="example">//Циклы<br><br>// i++ - увеличение на 1, i-- - уменьшение на 1<br><br>for (var i = 0; i <=10; i++);<br>console.log(i);<br><br>for (var i = 100; i > 10; i);<br>console.log(i);<br><br>for (var i = 100; i >= 10; i -= 10);<br>console.log(i);<br><br>var i = 0;<br>while (i < 10) {<br>  console.log(i);<br>  i++;<br>}<br><br>var i = 20;<br>do {<br>console.log(i);<br>} while (i > 10);<br><br>var colors = new Array ("Red", "Green", "Blue");<br>for (var i = 0; i < colors.length; i++);<br>  console.log(colors [i]);</p>
+  		<p class="example">// Операторы условий<br><br>var num_1 = 23;<br>var num_2 = 32;<br>if (num_1 == num_2) {<br>  console.log ("Переменные равны");<br>} else if (num_1 > num_2) {<br>  console.log ("num_1 >");<br>} else {<br>console.log ("num_2 >");<br>}<br><br>var bool = true;<br>if (bool) { //  =  if (bool = true); if (!bool)  =  if (bool = false)<br>  console.log (bool + " is true");<br>}<br><br>// switch case<br>var res = 3;<br>switch (res) {<br>  case 1:<br>        alert ("res = 1");<br>  break;<br>    case 2:<br>        alert ("res = 2");<br>  break;<br>      case 3:<br>        alert ("res = 3");<br>  break;<br>  default;<br>        alert ("res is unknown");<br>}</p>
+  		<p class="example">// Функции<br><br>function write (word) {<br>  document.write (word);<br>}<br>write ("Hello");<br>write ("&lt;br&gt;");<br>write ("World");<br><br>function summ (a, b) {<br>  return a + b;<br>}<br>document.write (summ (23, 34));</p>
+  		<p class="example">//Создание объекта<br><br>var person = {<br>  firstName: 'Ivan',<br>age: 45,<br>children: ['Liza', 'Katya'],<br>adress: {<br>  street: '12, Baiker st.',<br>city: 'Boston',<br>state: 'MA'<br>}<br>}<br>console.log (person);                         // (person.firstName) | (person.children[0]) | (person.adress.city)<br><br>var apple = nem Object ();<br>apple.color = 'green';<br>apple.shape = 'round';<br>apple.describe = function () {<br>  return 'An apple is ' + this.color;<br>}<br>console.log (apple.describe ()); | (apple.color)</p>
         <hr>
-
-
 </body>
 </html>
 

@@ -1,3 +1,5 @@
+'use strict';
+
 function calculateTotalDistance(time, speedOfFirst, speedOfSecond) {
 var distanceOfFirst = speedOfFirst * time;
 var distanceOfSecond = speedOfSecond * time;
