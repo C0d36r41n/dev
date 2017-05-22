@@ -194,29 +194,52 @@
 		<p>Валидация с использованием встроенных атрибутов у элементов формы. Используются специальные типы полей ввода: number, date и т.д.</p>
 		<h4>Не системная валидация</h4>
 		<p>Системные атрибуты, если и используются, то ограниченно, как дополнительные инструменты. Реакция формы на неправильные данные реализуется вручную.</p>
-		<p class="example">// Валидация формы:<br>1. ограничения на минимальное/максимальное значение<br><br>// Форма и поля ввода<br>var formElement = document.forms['searchform'];<br><br>var guests = formElement['searchform-guests-number'];<br>var rooms = formElement['searchform-guests-rooms'];<br><br>// Минимальное количество гостей - 1, максимальное - 6<br>guests.min = 1;<br>guests.max=6;<br><br>// Минимальное и максимальное количество комнат зависит от числа гостей<br>var MAX_GUESTS_PER_ROOM = 3;<br><br>/**<br>* Функция, которая ограничивает минимальное и максимальное значение комнат в зависимости от числа гостей.<br>*@param {Element} roomsElement<br>*@param {number} guestsNumber<br>*/<br>function setMinAndMaxRooms(roomsElement,guestsNumber) {<br></p>
-
-
-		<h3></h3>
+		<p class="example">// Валидация формы:<br>1. ограничения на минимальное/максимальное значение<br><br>// Форма и поля ввода<br>var formElement = document.forms['searchform'];<br><br>var guests = formElement['searchform-guests-number'];<br>var rooms = formElement['searchform-guests-rooms'];<br><br>// Минимальное количество гостей - 1, максимальное - 6<br>guests.min = 1;<br>guests.max=6;<br><br>// Минимальное и максимальное количество комнат зависит от числа гостей<br>var MAX_GUESTS_PER_ROOM = 3;<br><br>/**<br>* Функция, которая ограничивает минимальное и максимальное значение комнат в зависимости от числа гостей.<br>*@param {Element} roomsElement<br>*@param {number} guestsNumber<br>*/<br>function setMinAndMaxRooms(roomsElement,guestsNumber) {<br>// Минимальное количество комнат - если в каждой комнате будет жить максимальное количество человек (3).<br>roomsElement.min = Math.ceil(guestsNumber / MAX_GUESTS_PER_ROOM);<br><br>// Максимальное количество комнат - если в каждой комнате будет жить по 1 человеку.<br>roomsElement.max = guestsNumber;<br>}<br><br>// установка начальных значений<br>guests.value = 2;<br>setMinAndMaxRooms(rooms, guests.value);<br>rooms.value = rooms.min;<br><br>// 2. реакция на изменение<br>guests.onchange = function () {<br>setMinAndMaxRooms(rooms, guests.value);<br>}<br><br>// При отправке формы, сохраним последние данные в cookies<br>formElement.onsubmit = function(evt) {<br>// Объект evt представляет собой объект для работы с произошедшим событием.<br>evt.preventDefault();<br>document.cookie = 'guests=' + guests.value + ';expires=';<br>document.cookie = 'rooms=' + rooms.value;<br>}</p>
+		<p><span class="definition">События</span> - механизм, позволяющий сообщить о том, что пользователь произвел некое  действие</p>
+		<h3>События DOM level 0</h3>
+		<p>Функции, которые записываются DOM-элементам в атрибуты с приставкой 'on'</p>
+		<p><span class="definition">Шаблонизация</span> - создание однотипных DOM элементов на основе шаблона из структуры однородных данных.</p>
 		<ul>
-		<li></li>
-		<p class="example"></p>
-		<li></li>
-		<p class="example"></p>
-		<li></li>
-		<p class="example"></p>
-		<li></li>
-		<p class="example"></p>
-		<li></li>
-		<p class="example"></p>
+			<li>На основе текстового шаблона</li>
+			<li>На основе элемента</li>
 		</ul>
-
-
-
-
-
-
-
+		<h3>Итераторы по массивам</h3>
+		<ul>
+			<li>Простой перебор всех массивов</li>
+			<p class="example">Array.forEach(function(*, number, Array), *);</p>
+			<li>Мапирование</li>
+			<p class="example">Array.map(function(*, number, Array):*, *):Array;</p>
+			<li>Фильтрация</li>
+			<p class="example">Array.filter(function(*, number, Array): boolean, *): Array;</p>
+			<li>Проверка значений</li>
+			<p class="example">Array.some(function(*, number, Array):boolean, *): boolean;</p>
+			<p class="example">Array.every(function(*, number, Array):boolean, *): boolean;</p>
+			<li>Сверстка массива в одно значение</li>
+			<p class="example">Arra.reduce(function(*, *):*, *, *): *;<br>Arra.reduceRight(function(*, *):*, *, *): *;</p>
+		</ul>
+		<h3>Перемещение DOM-элементов</h3>
+		<ul>
+			<li>Добавить один элемент в другой</li>
+			<p class="example">Node.appendChild(childToAdd: Node);</p>
+			<li>Удалить элемент</li>
+			<p class="example">Node.removeChild(childToRemove: Node);</p>
+			<li>Добавить элемент перед другим</li>
+			<p class="example">Node.insertBefore(newNode: Node, referenceNode: Node);</p>
+			<li>Заменить один элемент другиим</li>
+			<p class="example">Node.replaceChild(newNode: Node, nodeToReplace: Node);</p>
+			<li>Скопировать элемент</li>
+			<p class="example">Node.cloneNode(deep: true);</p>
+		</ul>
+		<h3>Создание элеметов в DOM</h3>
+		<ul>
+			<li>Создание элемента с указанным именем тега</li>
+			<p class="example">document.createElement(tagname: string):Element;</p>
+			<li>Создание элемента через вызов конструктора (работает только для Image)</li>
+			<p class="example">new Image(width: number, height: number);</p>
+			<li>Редактирование HTML у родителя</li>
+			<p class="example">parentElement.innerHTML = '&lt;div&gt;Потомок*&lt;/div&gt;';</p>
+			<p>*даже два - HTMLDivElement и Text</p>
+		</ul>
 
 	</fieldset>
 		<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
@@ -243,6 +266,10 @@
         <hr>
 </body>
 </html>
+
+
+
+
 
 <p><span class="definition"></span></p>
 <p class="example"></p>
