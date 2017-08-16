@@ -272,6 +272,31 @@
 			<p>*даже два - HTMLDivElement и Text</p>
 		</ul>
 	</fieldset>
+	<fieldset>
+		<Legend id=""><h2> Условные и циклические конструкции </h2></legend>
+		<p class="example">var a = 10;<br><br>if (a == 10) {<br>alert("a = 10");<br>};</p>
+		<p class="example">var a = 10;<br><br>if (a == 10) {<br>alert("a = 10");<br>}<br>else {<br>alert("a != 10")<br>};</p>
+		<p class="example">Тернарный (третичный) оператор<br><br>var a = 10;<br>var msg = (a == 10) ? "a = 10" : "a != 10";<br>alert(msg);</p>
+		<p class="example">Оператор многозначного выбора (переключатель).<br>Конструкция switch служит для сравнения значения на равенство с различными вариантами.<br><br>var day = "10";<br><br>switch (day) {<br>case "10":<br>{<br>alert("a = 10");<br>}<br>break;<br>case "11":<br>{<br>alert("a = 11");<br>}<br>break;<br>};</p>
+		<p class="example">Оператор многозначного выбора (переключатель).<br>В конструкции переключателя switch-case может присутствовать блок default.<br><br>var day = "10";<br><br>switch (day) {<br>case "10":<br>{<br>alert("a = 10");<br>}<br>break;<br>case "11":<br>{<br>alert("a = 11");<br>}<br>break;<br>default:<br>{<br>alert("совпадений нет");<br>};<br>};</p>
+		<p class="example">var a = promt("Введите число 22", "0");<br><br>if (a == "22") {<br>document.write("Введенное значение верною");<br>}<br><br>document.write("Эта строка выполнится в любом случае");</p>
+	</fieldset>
+	<fieldset>
+		<Legend id=""><h2> Массивы </h2></legend>
+		<p><span class="definition">Массив в JS</span> - именованный набор не сторого типизированных переменных, расположенных в памяти непосредственно друг за другом, доступ к которым осуществляется по индексу. При создании массива используются [] скобки, внутри которых через запятую перечисляются элементы. Каждый элемент нумеруется индексом по возрастанию от 0.</p>
+		<p class="example">var array = ["text", 234, "Alex", true, 435];</p>
+		<p class="example">Одномерный массив из целых чисел размерностью в 5 элементов.<br>var a = [1, 2, 3, 4, 6];<br><br>document.write(a); //Вывод элементов массива, при этом массив преобразуется в строку "1, 2, 3, 4, 6"</p>
+		<p class="example">Одномерный массив из строковых элементов размерностью в 12 элементов.<br>var b = ["September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August"]<br>document.write("hr");<br>document.write(b);</p>
+		<p class="example">Пустой массив размерностью в 3 элемента.<br>var c = [ , , , ];<br>document.write("hr");<br>document.write(c);</p>
+		<p class="example">Одномерный массив из трех элементво разных типов.<br>var d = ["Hello", 34, true];<br>document.write("hr");<br>document.write(d);</p>
+		<p class="example">Конструктор Array()<br><br>var a = Array(); //Пустой массив.<br>var b = Array(1, 2, 3, 4, 5, 6); //Массив размерностью в 6 элементов.<br><br>document.write(b);<br><br>document.write("hr");<br><br>var c = Array(10); // Массив размерностью в 10 элементов.<br><br>document.write(c);</p>
+	</fieldset>
+
+
+
+
+
+
 		<p class="example">var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>polygonSides [0] // 0 - индекс массива, в данном случае выдаст значение 10.</p>
 		<p class="example">//Посчитать сумму сторон<br>var polygonSides = (10, 20, 30, 40, 30, 20, 10);<br>var polygonPerimeter = 0;<br>for (var i = 0; i < pilygonSides.length; i++) {<br>polygonPerimetr += polygonSides[i];<br>}<br>polygonPerimetr;</p>
   		<p class="example">'10' + 2;<br>"102"</p>
@@ -297,12 +322,6 @@
 </body>
 </html>
 
-
-
-
-
-<p><span class="definition"></span></p>
-<p class="example"></p>
 &lt;script&gt;
 
 ---------------------------------------------------------------------------------
